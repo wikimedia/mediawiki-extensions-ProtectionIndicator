@@ -1,0 +1,38 @@
+{
+	"name": "ProtectionIndicator",
+	"author": [
+		"Sohom Datta"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:ProtectionIndicator",
+	"descriptionmsg": "protection-indicator-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ProtectionIndicator\\": "includes/"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onBeforePageDisplay"
+	},
+	"MessagesDirs": {
+		"ProtectionIndicator": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ProtectionIndicator/resources"
+	},
+	"ResourceModules": {
+		"ext.protectionIndicator": {
+			"dependencies": [],
+			"messages": [],
+			"styles": [],
+			"scripts": []
+		}
+	},
+
+	"manifest_version": 2
+}

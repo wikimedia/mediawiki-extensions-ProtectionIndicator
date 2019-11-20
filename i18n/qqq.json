@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sohom Datta"
+		]
+	},
+	"protection-indicator-desc": "{{desc|name=Protection Indicator}}",
+	"protection-indicator-explanation-cascading": "Informational text show to user on hovering over the protection icons. $1 represents the action, $2 represents the level of protection, $3 is the timestamp of expiry. The protection is a cascading protection.",
+	"protection-indicator-explanation-cascading-infinity": "Informational text show to user on hovering over the protection icons. $1 represents the action, $2 represents the level of protection. The protection is a cascading protection.",
+	"protection-indicator-explanation-non-cascading": "Informational text show to user on hovering over the protection icons. $1 represents the action, $2 represents the level of protection, $3 is the timestamp of expiry.",
+	"protection-indicator-explanation-non-cascading-infinity": "Informational text show to user on hovering over the protection icons. $1 represents the action, $2 represents the level of protection."
+}
