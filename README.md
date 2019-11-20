@@ -5,3 +5,5 @@ Among the things that need to be done are
 * Add support for customisation of the icon using javascript. I'll probably try to make this into a MediaWiki space on-wiki file thingy so that it can be manipulated per the wishes of the community.
 * Check if adding support for FlaggedRevs is worth it.
 * Convert the title into a OOUI popup and add some helpful links to it.
+
+This extension is based on extension BoilerPlate.
