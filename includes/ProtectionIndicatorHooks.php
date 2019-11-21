@@ -19,6 +19,8 @@
 
 namespace MediaWiki\Extension\ProtectionIndicator;
 
+use OOUI;
+
 class ProtectionIndicatorHooks {
 	/**
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
@@ -69,41 +71,28 @@ class ProtectionIndicatorHooks {
 		$out->addModuleStyles( [ 'oojs-ui.styles.icons-moderation' ] );
 		$out->addModules( [ 'ext.protectionIndicator' ] );
 		$timestamp = wfTimestamp( TS_RFC2822, $rExpiry );
-		if ( $cascading ) {
-			if ( strlen( $timestamp ) ) {
-				$icon = new \OOUI\IconWidget( [
+		$icon = $icon = new OOUI\IconWidget( [
 					'icon' => 'lock',
 					'label' => wfMessage( 'protection-indicator-explanation-cascading',
 					 $level, $action, $timestamp )->parse(),
 					'infusable' => true,
 					'classes' => [ 'protection-indicator-icon' ]
 				] );
+		if ( $cascading ) {
+			if ( strlen( $timestamp ) ) {
+				$icon->setLabel( wfMessage( 'protection-indicator-explanation-cascading',
+					 $level, $action, $timestamp )->parse() );
 			} else {
-				$icon = new \OOUI\IconWidget( [
-					'icon' => 'lock',
-					'label' => wfMessage( 'protection-indicator-explanation-cascading-infinity',
-					 $level, $action )->parse(),
-					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon' ]
-				] );
+				$icon->setLabel( wfMessage( 'protection-indicator-explanation-cascading-infinity',
+					 $level, $action )->parse() );
 			}
 		} else {
 			if ( strlen( $timestamp ) ) {
-				$icon = new \OOUI\IconWidget( [
-					'icon' => 'lock',
-					'label' => wfMessage( 'protection-indicator-explanation-non-cascading',
-					 $level, $action, $timestamp )->parse(),
-					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon' ]
-				] );
+				$icon->setLabel( wfMessage( 'protection-indicator-explanation-non-cascading',
+					 $level, $action, $timestamp )->parse() );
 			} else {
-				$icon = new \OOUI\IconWidget( [
-					'icon' => 'lock',
-					'label' => wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
-					 $level, $action )->parse(),
-					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon' ]
-				] );
+				$icon->setLabel( wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
+					 $level, $action )->parse() );
 			}
 		}
 		$out->setIndicators( [ 'protection-indicator-' . ( ( $cascading ) ? 'cascading-'
