@@ -27,7 +27,6 @@ class ProtectionIndicatorHooks {
 	 */
 	public static function onBeforePageDisplay( \OutputPage $out, \Skin $skin ) {
 		global $wgRestrictionLevels;
-		$config = $out->getConfig();
 		$title = $skin->getRelevantTitle();
 		$restrictionTypes = $title->getRestrictionTypes();
 		$o = new ProtectionIndicatorHooks;
@@ -65,44 +64,49 @@ class ProtectionIndicatorHooks {
 	 * @param bool $cascading | true is protection cascading
 	 */
 	protected function createIndicator( \OutputPage $out, $action,
-		$level, $rExpiry = null, $cascading = false ) {
+		$level, $rExpiry, $cascading = false ) {
 		$out->enableOOUI();
 		$out->addModuleStyles( [ 'oojs-ui.styles.icons-moderation' ] );
+		$out->addModules( [ 'ext.protectionIndicator' ] );
 		$timestamp = wfTimestamp( TS_RFC2822, $rExpiry );
 		if ( $cascading ) {
 			if ( strlen( $timestamp ) ) {
 				$icon = new \OOUI\IconWidget( [
 					'icon' => 'lock',
-					'title' => wfMessage( 'protection-indicator-explanation-cascading',
-					 $level, $action, $timestamp ),
-					'infuse' => true
+					'label' => wfMessage( 'protection-indicator-explanation-cascading',
+					 $level, $action, $timestamp )->parse(),
+					'infusable' => true,
+					'classes' => [ 'protection-indicator-icon' ]
 				] );
 			} else {
 				$icon = new \OOUI\IconWidget( [
 					'icon' => 'lock',
-					'title' => wfMessage( 'protection-indicator-explanation-cascading-infinity',
-					 $level, $action ),
-					'infuse' => true
+					'label' => wfMessage( 'protection-indicator-explanation-cascading-infinity',
+					 $level, $action )->parse(),
+					'infusable' => true,
+					'classes' => [ 'protection-indicator-icon' ]
 				] );
 			}
 		} else {
 			if ( strlen( $timestamp ) ) {
 				$icon = new \OOUI\IconWidget( [
 					'icon' => 'lock',
-					'title' => wfMessage( 'protection-indicator-explanation-non-cascading',
-					 $level, $action, $timestamp ),
-					'infuse' => true
+					'label' => wfMessage( 'protection-indicator-explanation-non-cascading',
+					 $level, $action, $timestamp )->parse(),
+					'infusable' => true,
+					'classes' => [ 'protection-indicator-icon' ]
 				] );
 			} else {
 				$icon = new \OOUI\IconWidget( [
 					'icon' => 'lock',
-					'title' => wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
-					 $level, $action ),
-					'infuse' => true
+					'label' => wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
+					 $level, $action )->parse(),
+					'infusable' => true,
+					'classes' => [ 'protection-indicator-icon' ]
 				] );
 			}
 		}
-		$out->setIndicators( [ 'protection-' . ( ( $cascading ) ? 'cascading-'
+		$out->setIndicators( [ 'protection-indicator-' . ( ( $cascading ) ? 'cascading-'
 		 : '' ) . $action => $icon ] );
 	}
 }

@@ -27,10 +27,14 @@
 	},
 	"ResourceModules": {
 		"ext.protectionIndicator": {
-			"dependencies": [],
+			"dependencies": [
+				"oojs-ui-core"
+			],
 			"messages": [],
 			"styles": [],
-			"scripts": []
+			"scripts": [
+				"ext.protectionIndicator/init.js"
+			]
 		}
 	},
 
