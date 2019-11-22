@@ -1,0 +1,11 @@
+.protection-indicator-footer {
+	margin: 0.5em 0 0.5em;
+}
+
+.protection-indicator-log-link:before {
+	content: '(';
+}
+
+.protection-indicator-log-link:after {
+	content: ')';
+}

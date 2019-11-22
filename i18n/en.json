@@ -5,8 +5,9 @@
 		]
 	},
 	"protection-indicator-desc": "An extension created solely for the purpose of adding protection indicators to pages.",
-	"protection-indicator-explanation-cascading": "This page is cascading $2 protected untill $3. '$1' rights are required to $2 this page.",
-	"protection-indicator-explanation-cascading-infinity": "This page is cascading $2 protected. '$1' rights are required to $2 this page.",
-	"protection-indicator-explanation-non-cascading": "This page is $2 protected untill $3. '$1' rights are required to $2 this page.",
-	"protection-indicator-explanation-non-cascading-infinity": "This page is $2 protected. '$1' rights are required to $2 this page."
+	"protection-indicator-explanation-cascading": "This page is cascading $2 protected until $3. The '$1' is right are required to $2 this page.",
+	"protection-indicator-explanation-cascading-infinity": "This page is cascading $2 protected. The '$1' right is required to $2 this page.",
+	"protection-indicator-explanation-non-cascading": "This page is $2 protected until $3. The '$1' right is required to $2 this page.",
+	"protection-indicator-explanation-non-cascading-infinity": "This page is $2 protected. The '$1' right is required to $2 this page. ",
+	"protection-indicator-protection-log-link-text": "View protection log"
 }

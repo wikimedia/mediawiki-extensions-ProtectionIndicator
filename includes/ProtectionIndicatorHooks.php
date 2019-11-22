@@ -13,8 +13,6 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- *
- * @file
  */
 
 namespace MediaWiki\Extension\ProtectionIndicator;
@@ -23,13 +21,15 @@ use OOUI;
 
 class ProtectionIndicatorHooks {
 	/**
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
-	 * @param \OutputPage $out
-	 * @param \Skin $skin
+	 * Hook to load the protection icons
+	 * @param Article &$article
+	 * @param bool &$outputDone
+	 * @param bool &$pcache
 	 */
-	public static function onBeforePageDisplay( \OutputPage $out, \Skin $skin ) {
+	public static function onArticleViewHeader( &$article, &$outputDone, &$pcache ) {
 		global $wgRestrictionLevels;
-		$title = $skin->getRelevantTitle();
+		$title = $article->getTitle();
+		$out = $article->getContext()->getOutput();
 		$restrictionTypes = $title->getRestrictionTypes();
 		$o = new ProtectionIndicatorHooks;
 		foreach ( $restrictionTypes as $action ) {
@@ -59,7 +59,7 @@ class ProtectionIndicatorHooks {
 
 	/**
 	 * A function to create a padlock icon which is then
-	 * @param \OutputPage $out Output page object to write to
+	 * @param OutputPage $out Output page object to write to
 	 * @param string $action Action for which protection has been applied
 	 * @param string $level Userright required to perform action
 	 * @param string|null $rExpiry Expiry time in 14 character format
@@ -68,34 +68,38 @@ class ProtectionIndicatorHooks {
 	protected function createIndicator( \OutputPage $out, $action,
 		$level, $rExpiry, $cascading = false ) {
 		$out->enableOOUI();
-		$out->addModuleStyles( [ 'oojs-ui.styles.icons-moderation' ] );
+		$out->addModuleStyles( [ 'ext.protectionIndicator.custom' ] );
 		$out->addModules( [ 'ext.protectionIndicator' ] );
+		$out->addModuleStyles( [ 'oojs-ui.styles.icons-moderation' ] );
 		$timestamp = wfTimestamp( TS_RFC2822, $rExpiry );
-		$icon = $icon = new OOUI\IconWidget( [
+		$icon = new OOUI\IconWidget( [
 					'icon' => 'lock',
-					'label' => wfMessage( 'protection-indicator-explanation-cascading',
-					 $level, $action, $timestamp )->parse(),
 					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon' ]
+					'classes' => [ 'protection-indicator-icon', 'protection-indicator-' . $action ]
 				] );
+
 		if ( $cascading ) {
 			if ( strlen( $timestamp ) ) {
-				$icon->setLabel( wfMessage( 'protection-indicator-explanation-cascading',
-					 $level, $action, $timestamp )->parse() );
+				$label = wfMessage( 'protection-indicator-explanation-cascading',
+					 $level, $action, $timestamp )->parse();
 			} else {
-				$icon->setLabel( wfMessage( 'protection-indicator-explanation-cascading-infinity',
-					 $level, $action )->parse() );
+				$label = wfMessage( 'protection-indicator-explanation-cascading-infinity',
+					 $level, $action )->parse();
 			}
 		} else {
 			if ( strlen( $timestamp ) ) {
-				$icon->setLabel( wfMessage( 'protection-indicator-explanation-non-cascading',
-					 $level, $action, $timestamp )->parse() );
+				$label = wfMessage( 'protection-indicator-explanation-non-cascading',
+					 $level, $action, $timestamp )->parse();
 			} else {
-				$icon->setLabel( wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
-					 $level, $action )->parse() );
+				$label = wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
+					 $level, $action )->parse();
 			}
+			// TODO: Find a way to add a log entry to the popup message and
+			// regulate that using a config variable
 		}
+		$icon->setLabel( $label );
 		$out->setIndicators( [ 'protection-indicator-' . ( ( $cascading ) ? 'cascading-'
 		 : '' ) . $action => $icon ] );
 	}
+
 }
