@@ -15,4 +15,4 @@ Among the things that need to be done are
 * Git clone this repository into the ```extensions/``` directory of your mediawiki installation. 
 * Add ```wfLoadExtension( 'ProtectionIndicator' )``` to your ```LocalSetting.php``` file.
 * Navigate to a protected page on your wiki and check if the icons work.
-* Add css to ```MediaWiki:ProtectionIndicatorCustom.css``` to customise the lock icons per your taste. (The class names for the icons go like ```protection-indicator-<action>```.)
+* Add css to ```MediaWiki:ProtectionIndicatorCustom.css``` to customise the lock icons per your taste. (The class names for the icons go like ```protection-indicator-<cascading>-<level>-<action>```.)
