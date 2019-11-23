@@ -13,8 +13,19 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\ProtectionIndicator\\": "includes/"
 	},
+	"config": {
+		"ShowIconsOnMainPage": {
+			"description": "Config to show icons on Main Page",
+			"value": false
+		},
+		"ShowReasonInPopup": {
+			"description": "Config to show the latest protection entry in the popup",
+			"value": true
+		}
+	},
 	"Hooks": {
-		"ArticleViewHeader": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onArticleViewHeader"
+		"ArticleViewHeader": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onArticleViewHeader",
+		"ParserFirstCallInit": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onParserFirstCallInit"
 	},
 	"MessagesDirs": {
 		"ProtectionIndicator": [
@@ -28,10 +39,13 @@
 	"ResourceModules": {
 		"ext.protectionIndicator": {
 			"dependencies": [
-				"oojs-ui-core"
+				"oojs-ui-core",
+				"mediawiki.api",
+				"mediawiki.jqueryMsg"
 			],
 			"messages": [
-				"protection-indicator-protection-log-link-text"
+				"protection-indicator-protection-log-link-text",
+				"protection-indicator-reason-wrapper"
 			],
 			"styles": [
 				"ext.protectionIndicator/init.css"

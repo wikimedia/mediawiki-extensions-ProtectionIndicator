@@ -30,6 +30,17 @@ class ProtectionIndicatorHooks {
 		global $wgRestrictionLevels;
 		$title = $article->getTitle();
 		$out = $article->getContext()->getOutput();
+		$config = $out->getConfig();
+		// Use configurational variable to check if Wiki wants icons
+		// on their main page
+		// In the same condition check if the page
+		// is configured to supress all protection icons
+		if ( !$config->get( 'ShowIconsOnMainPage' ) && $title->isMainPage() ) {
+			return;
+		}
+		if ( $config->get( 'ShowReasonInPopup' ) ) {
+			$out->addJSConfigVars( 'ShowReasonInPopup', true );
+		}
 		$restrictionTypes = $title->getRestrictionTypes();
 		$o = new ProtectionIndicatorHooks;
 		foreach ( $restrictionTypes as $action ) {
@@ -58,7 +69,7 @@ class ProtectionIndicatorHooks {
 	}
 
 	/**
-	 * A function to create a padlock icon which is then
+	 * A function to create a padlock icon which is then added to output
 	 * @param OutputPage $out Output page object to write to
 	 * @param string $action Action for which protection has been applied
 	 * @param string $level Userright required to perform action
@@ -75,8 +86,9 @@ class ProtectionIndicatorHooks {
 		$icon = new OOUI\IconWidget( [
 					'icon' => 'lock',
 					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon', 'protection-indicator-' . $action ]
-				] );
+					'classes' => [ 'protection-indicator-icon', 'protection-indicator-'
+					. ( ( $cascading ) ? 'cascading-' : '' ) . $level . '-' . $action ]
+					] );
 
 		if ( $cascading ) {
 			if ( strlen( $timestamp ) ) {
@@ -94,12 +106,41 @@ class ProtectionIndicatorHooks {
 				$label = wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
 					 $level, $action )->parse();
 			}
-			// TODO: Find a way to add a log entry to the popup message and
-			// regulate that using a config variable
 		}
 		$icon->setLabel( $label );
 		$out->setIndicators( [ 'protection-indicator-' . ( ( $cascading ) ? 'cascading-'
 		 : '' ) . $action => $icon ] );
 	}
 
+	/**
+	 * Hook to create a magic word
+	 * @param \Parser $parser
+	 */
+	public static function onParserFirstCallInit( \Parser $parser ) {
+		$parser->setHook( 'supressprotectionindicatoricons',
+		[ self::class, 'supressProtectionIndicators' ] );
+	}
+
+	/**
+	 * Takes the arguments of the magic word and adds them to ExtensionData
+	 * @param string|null $input
+	 * @param array $args Arguments of the magic word
+	 * @param \Parser $parser
+	 * @param \PPFrame $frame
+	 * @return string
+	 */
+	public static function supressProtectionIndicators( $input, array $args,
+	\Parser $parser, \PPFrame $frame ) {
+		$out = $parser->getOutput();
+		$othervalues = [];
+		foreach ( $args as $name => $value ) {
+			if ( htmlspecialchars( $name ) == 'all' && htmlspecialchars( $value ) == 'true' ) {
+				$out->setExtensionData( 'protection-indicator-supress-all', true );
+			} else {
+				array_push( $othervalues, htmlspecialchars( $value ) );
+			}
+		}
+		$out->setExtensionData( 'protection-indicator-supress', $othervalues );
+		return '';
+	}
 }
