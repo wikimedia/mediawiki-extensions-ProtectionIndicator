@@ -2,19 +2,19 @@
 	// eslint-disable-next-line no-jquery/no-global-selector
 	var $protectionIndicators = $( '.protection-indicator-icon' );
 	$protectionIndicators.each( function () {
-		var protectionExplanation, icon = OO.ui.infuse( this ), htmlContent, htmlfooter, reasontext = '', api = new mw.Api( {
+		var protectionExplanation, icon = OO.ui.infuse( this ), htmlContent, htmlfooter, reasonhtml = '', api = new mw.Api( {
 			'user-agent': 'ProtectionIndicator-extension'
 		} );
 		function showProtectionExplanation( e ) {
 			e.preventDefault();
 			if ( !protectionExplanation ) {
 				protectionExplanation = new OO.ui.PopupWidget( {
-					$content: $( '<div>' ).html( htmlContent ).append( reasontext, htmlfooter ),
+					$content: $( '<div>' ).html( htmlContent ).append( reasonhtml, htmlfooter ),
 					padded: true,
 					anchor: true,
 					autoClose: true,
 					$autoCloseIgnore: e.target,
-					width: 500
+					width: 400
 				} );
 				$( e.target ).after( protectionExplanation.$element );
 			}
@@ -42,9 +42,11 @@
 				lelimit: 1
 			} ).done( function ( response ) {
 				if ( response.query.logevents[ 0 ] && response.query.logevents[ 0 ].comment ) {
-					reasontext = mw.message( 'protection-indicator-reason-wrapper',
-						response.query.logevents[ 0 ].user,
-						response.query.logevents[ 0 ].comment ).parseDom();
+					reasonhtml = $( '<div>' )
+						.addClass( 'protection-indicator-reason' )
+						.html( mw.message( 'protection-indicator-reason-wrapper',
+							response.query.logevents[ 0 ].user,
+							response.query.logevents[ 0 ].comment ).parseDom() );
 				}
 				icon.$element.on( 'click', function ( e ) {
 					showProtectionExplanation( e );

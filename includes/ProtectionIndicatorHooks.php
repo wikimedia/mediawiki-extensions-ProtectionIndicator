@@ -21,16 +21,25 @@ use OOUI;
 
 class ProtectionIndicatorHooks {
 	/**
-	 * Hook to load the protection icons
-	 * @param Article &$article
+	 * Hook to load the protection icons on article pages
+	 * @param \Article $article Article object to be used
 	 * @param bool &$outputDone
 	 * @param bool &$pcache
 	 */
-	public static function onArticleViewHeader( &$article, &$outputDone, &$pcache ) {
+	public static function onArticleViewHeader( \Article $article, &$outputDone, &$pcache ) {
 		global $wgRestrictionLevels;
 		$title = $article->getTitle();
 		$out = $article->getContext()->getOutput();
 		$config = $out->getConfig();
+		if ( !$out->isArticle() && $title->isSpecialPage() ) {
+			return;
+		}
+		if ( $article->getRevision() ) {
+			$pOut = $article->getParserOutput( $article->getRevision()->getID() );
+			if ( $pOut->getExtensionData( 'protection-indicator-supress-all' ) ) {
+				return;
+			}
+		}
 		// Use configurational variable to check if Wiki wants icons
 		// on their main page
 		// In the same condition check if the page
@@ -38,6 +47,8 @@ class ProtectionIndicatorHooks {
 		if ( !$config->get( 'ShowIconsOnMainPage' ) && $title->isMainPage() ) {
 			return;
 		}
+		// Check a configurational variable to see if the Wiki wants reasons
+		// in the popup
 		if ( $config->get( 'ShowReasonInPopup' ) ) {
 			$out->addJSConfigVars( 'ShowReasonInPopup', true );
 		}
@@ -117,30 +128,22 @@ class ProtectionIndicatorHooks {
 	 * @param \Parser $parser
 	 */
 	public static function onParserFirstCallInit( \Parser $parser ) {
-		$parser->setHook( 'supressprotectionindicatoricons',
-		[ self::class, 'supressProtectionIndicators' ] );
+		$parser->setHook( 'supressProtectionIndicator',
+		[ self::class, 'supressProtectionIndicator' ] );
 	}
 
 	/**
-	 * Takes the arguments of the magic word and adds them to ExtensionData
+	 * Sets exension data needed to supresss all icons
 	 * @param string|null $input
 	 * @param array $args Arguments of the magic word
 	 * @param \Parser $parser
 	 * @param \PPFrame $frame
 	 * @return string
 	 */
-	public static function supressProtectionIndicators( $input, array $args,
+	public static function supressProtectionIndicator( $input, array $args,
 	\Parser $parser, \PPFrame $frame ) {
 		$out = $parser->getOutput();
-		$othervalues = [];
-		foreach ( $args as $name => $value ) {
-			if ( htmlspecialchars( $name ) == 'all' && htmlspecialchars( $value ) == 'true' ) {
-				$out->setExtensionData( 'protection-indicator-supress-all', true );
-			} else {
-				array_push( $othervalues, htmlspecialchars( $value ) );
-			}
-		}
-		$out->setExtensionData( 'protection-indicator-supress', $othervalues );
+		$out->setExtensionData( 'protection-indicator-supress-all', true );
 		return '';
 	}
 }

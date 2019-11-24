@@ -3,6 +3,7 @@
 	"author": [
 		"Sohom Datta"
 	],
+	"version": "0.1",
 	"url": "https://www.mediawiki.org/wiki/Extension:ProtectionIndicator",
 	"descriptionmsg": "protection-indicator-desc",
 	"license-name": "GPL-2.0-or-later",
@@ -22,6 +23,9 @@
 			"description": "Config to show the latest protection entry in the popup",
 			"value": true
 		}
+	},
+	"ExtensionMessagesFiles": {
+		"ProtectionIndicatorAlias": "includes/ProtectionIndicator.i18n.magic.php"
 	},
 	"Hooks": {
 		"ArticleViewHeader": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onArticleViewHeader",
