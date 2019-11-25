@@ -18,6 +18,8 @@
 namespace MediaWiki\Extension\ProtectionIndicator;
 
 use OOUI;
+use ExtensionRegistry;
+use FRPageConfig;
 
 class ProtectionIndicatorHooks {
 	/**
@@ -77,6 +79,13 @@ class ProtectionIndicatorHooks {
 				}
 			}
 		}
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'FlaggedRevs' ) ) {
+			$r = FRPageConfig::getStabilitySettings( $title );
+			if ( $r['autoreview'] ) {
+				$o->createIndicator( $out,
+					wfMessage( 'protection-indicator-flagged-revs' ), $r['autoreview'], $r['expiry'] );
+			}
+		}
 	}
 
 	/**
@@ -128,8 +137,8 @@ class ProtectionIndicatorHooks {
 	 * @param \Parser $parser
 	 */
 	public static function onParserFirstCallInit( \Parser $parser ) {
-		$parser->setHook( 'supressProtectionIndicator',
-		[ self::class, 'supressProtectionIndicator' ] );
+		$parser->setHook( 'suppressProtectionIndicator',
+		[ self::class, 'suppressProtectionIndicator' ] );
 	}
 
 	/**
@@ -140,7 +149,7 @@ class ProtectionIndicatorHooks {
 	 * @param \PPFrame $frame
 	 * @return string
 	 */
-	public static function supressProtectionIndicator( $input, array $args,
+	public static function suppressProtectionIndicator( $input, array $args,
 	\Parser $parser, \PPFrame $frame ) {
 		$out = $parser->getOutput();
 		$out->setExtensionData( 'protection-indicator-supress-all', true );

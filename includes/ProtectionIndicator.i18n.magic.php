@@ -19,8 +19,8 @@
 $magicWords = [];
 
 $magicWords['en'] = [
-	'supressProtectionIndicator' => [ 0, 'supressprotectionindicators',
-		'supressprotectionicons',
-		'supressprotectionindicator',
-		'supressprotectionicons' ],
+	'suppressProtectionIndicator' => [ 0, 'suppressprotectionindicators',
+		'suppressprotectionicons',
+		'suppressprotectionindicator',
+		'suppressprotectionicon' ],
 ];
