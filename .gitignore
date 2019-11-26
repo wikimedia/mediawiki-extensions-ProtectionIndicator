@@ -1,4 +1,20 @@
-/composer.lock
-/vendor
-/node_modules
+# Editors
+*~
+*.kate-swp
+.*.swp
+sublime-*
+.project
+.settings
+\#*#
+.#*
+/.idea
+.vscode
+
+# Install and build artifacts
+node_modules
+composer.lock
+vendor
 .eslintcache
+
+# OS
+.DS_Store
