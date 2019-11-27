@@ -5,7 +5,7 @@
 	],
 	"version": "0.1",
 	"url": "https://www.mediawiki.org/wiki/Extension:ProtectionIndicator",
-	"descriptionmsg": "protection-indicator-desc",
+	"descriptionmsg": "protectionindicator-extension-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
@@ -19,7 +19,7 @@
 			"description": "Config to show icons on Main Page",
 			"value": false
 		},
-		"ShowReasonInPopup": {
+		"ShowLogInPopup": {
 			"description": "Config to show the latest protection entry in the popup",
 			"value": true
 		}
@@ -29,7 +29,8 @@
 	},
 	"Hooks": {
 		"ArticleViewHeader": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onArticleViewHeader",
-		"ParserFirstCallInit": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onParserFirstCallInit"
+		"ParserFirstCallInit": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onParserFirstCallInit",
+		"ContentAlterParserOutput": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onContentAlterParserOutput"
 	},
 	"MessagesDirs": {
 		"ProtectionIndicator": [
@@ -47,10 +48,7 @@
 				"mediawiki.api",
 				"mediawiki.jqueryMsg"
 			],
-			"messages": [
-				"protection-indicator-protection-log-link-text",
-				"protection-indicator-reason-wrapper"
-			],
+			"messages": [],
 			"styles": [
 				"ext.protectionIndicator/init.css"
 			],

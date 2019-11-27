@@ -1,12 +1,12 @@
-.protection-indicator-footer,
-.protection-indicator-reason {
+.protectionindicator-extension-footer,
+.protectionindicator-extension-reason {
 	margin: 0.5em 0 0.5em 0;
 }
 
-.protection-indicator-log-link:before {
+.protectionindicator-extension-log-link:before {
 	content: '(';
 }
 
-.protection-indicator-log-link:after {
+.protectionindicator-extension-log-link:after {
 	content: ')';
 }

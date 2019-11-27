@@ -20,6 +20,7 @@ namespace MediaWiki\Extension\ProtectionIndicator;
 use OOUI;
 use ExtensionRegistry;
 use FRPageConfig;
+use LogEventsList;
 
 class ProtectionIndicatorHooks {
 	/**
@@ -29,18 +30,12 @@ class ProtectionIndicatorHooks {
 	 * @param bool &$pcache
 	 */
 	public static function onArticleViewHeader( \Article $article, &$outputDone, &$pcache ) {
-		global $wgRestrictionLevels;
 		$title = $article->getTitle();
 		$out = $article->getContext()->getOutput();
 		$config = $out->getConfig();
+		// Make sure that we are in the correct page
 		if ( !$out->isArticle() && $title->isSpecialPage() ) {
 			return;
-		}
-		if ( $article->getRevision() ) {
-			$pOut = $article->getParserOutput( $article->getRevision()->getID() );
-			if ( $pOut->getExtensionData( 'protection-indicator-supress-all' ) ) {
-				return;
-			}
 		}
 		// Use configurational variable to check if Wiki wants icons
 		// on their main page
@@ -49,87 +44,79 @@ class ProtectionIndicatorHooks {
 		if ( !$config->get( 'ShowIconsOnMainPage' ) && $title->isMainPage() ) {
 			return;
 		}
-		// Check a configurational variable to see if the Wiki wants reasons
-		// in the popup
-		if ( $config->get( 'ShowReasonInPopup' ) ) {
-			$out->addJSConfigVars( 'ShowReasonInPopup', true );
+		// Check if Revision of the article can be accessed,
+		// if we cannot we are probably on the wrong page
+		if ( !$article->getRevision() ) {
+			return;
 		}
-		$restrictionTypes = $title->getRestrictionTypes();
-		$o = new ProtectionIndicatorHooks;
-		foreach ( $restrictionTypes as $action ) {
-			$r = $title->getRestrictions( $action );
-			$rExpiry = $title->getRestrictionExpiry( $action );
-			foreach ( $wgRestrictionLevels as $level ) {
-				if ( in_array( $level, $r ) ) {
-					$o->createIndicator( $out, $action, $level, $rExpiry );
-				}
+		$pOut = $article->getParserOutput( $article->getRevision()->getID() );
+		// Maake sure protection icons have not been supressed.
+		if ( $pOut->getExtensionData( 'protectionindicator-extension-supress-all' ) ) {
+			return;
+		}
+		// Load the data of the extension
+		$protectionData = $pOut->getExtensionData( 'protectionindicator-extension-protection-data' );
+		$indicators = [];
+		foreach ( $protectionData as $protection ) {
+			if ( $config->get( 'ShowLogInPopup' ) && $protection[0] == 'edit-flaggedrev' ) {
+				array_push( $protection,
+					$pOut->getExtensionData( 'protectionindicator-extension-stability-log-data' ) );
+			} elseif ( $config->get( 'ShowLogInPopup' ) ) {
+				array_push( $protection,
+					$pOut->getExtensionData( 'protectionindicator-extension-protect-log-data' ) );
+			} else {
+				array_push( $protection, null );
 			}
+			$indicators[ 'protectionindicator-extension-' .
+			 $protection[0] ] = self::createIndicator( $protection );
 		}
-		$rCascade = $title->getCascadeProtectionSources( true );
-		$r = $rCascade[1];
-		if ( $rCascade[0] ) {
-			foreach ( $restrictionTypes as $action ) {
-				if ( array_key_exists( $action, $r ) ) {
-					$r = $r[$action];
-					foreach ( $wgRestrictionLevels as $level ) {
-						if ( in_array( $level, $r ) ) {
-							$o->createIndicator( $out, $action, $level, null, true );
-						}
-					}
-				}
-			}
-		}
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'FlaggedRevs' ) ) {
-			$r = FRPageConfig::getStabilitySettings( $title );
-			if ( $r['autoreview'] ) {
-				$o->createIndicator( $out,
-					wfMessage( 'protection-indicator-flagged-revs' ), $r['autoreview'], $r['expiry'] );
-			}
-		}
-	}
-
-	/**
-	 * A function to create a padlock icon which is then added to output
-	 * @param OutputPage $out Output page object to write to
-	 * @param string $action Action for which protection has been applied
-	 * @param string $level Userright required to perform action
-	 * @param string|null $rExpiry Expiry time in 14 character format
-	 * @param bool $cascading | true is protection cascading
-	 */
-	protected function createIndicator( \OutputPage $out, $action,
-		$level, $rExpiry, $cascading = false ) {
 		$out->enableOOUI();
 		$out->addModuleStyles( [ 'ext.protectionIndicator.custom' ] );
 		$out->addModules( [ 'ext.protectionIndicator' ] );
 		$out->addModuleStyles( [ 'oojs-ui.styles.icons-moderation' ] );
-		$timestamp = wfTimestamp( TS_RFC2822, $rExpiry );
+		$out->setIndicators( $indicators );
+	}
+
+	/**
+	 * A function to create a padlock icon.
+	 * @param array $protection
+	 * @return object OOUI object of icon
+	 */
+	protected static function createIndicator( $protection ) {
+		// infinity time should give us a empty string
+		$timestamp = wfTimestamp( TS_RFC2822, $protection[2] );
+		// classes are of the type
+		// protectionindicator-extension-<cascading>-<flaggedrevs>-<action>-<level>
 		$icon = new OOUI\IconWidget( [
 					'icon' => 'lock',
 					'infusable' => true,
-					'classes' => [ 'protection-indicator-icon', 'protection-indicator-'
-					. ( ( $cascading ) ? 'cascading-' : '' ) . $level . '-' . $action ]
+					'classes' => [ 'protectionindicator-extension-icon', 'protectionindicator-extension-'
+					. ( ( $protection[3] ) ? 'cascading-' : '' ) .
+					( ( $protection[4] ) ? 'flaggedrevs-' : '' ) . $protection[1] . '-' . $protection[0] ]
 					] );
-
-		if ( $cascading ) {
+		if ( $protection[3] ) {
+			$label = wfMessage( 'protectionindicator-extension-explanation-cascading',
+				 $protection[1], $protection[0] )->parse();
+		} elseif ( $protection[4] ) {
 			if ( strlen( $timestamp ) ) {
-				$label = wfMessage( 'protection-indicator-explanation-cascading',
-					 $level, $action, $timestamp )->parse();
+				$label = wfMessage( 'protectionindicator-extension-explanation-flaggedrevs',
+					 $protection[1], $timestamp )->parse();
 			} else {
-				$label = wfMessage( 'protection-indicator-explanation-cascading-infinity',
-					 $level, $action )->parse();
+				$label = wfMessage( 'protectionindicator-extension-explanation-flaggedrevs-infinity',
+					 $protection[1] )->parse();
 			}
 		} else {
 			if ( strlen( $timestamp ) ) {
-				$label = wfMessage( 'protection-indicator-explanation-non-cascading',
-					 $level, $action, $timestamp )->parse();
+				$label = wfMessage( 'protectionindicator-extension-explanation-normal',
+					 $protection[1], $protection[0], $timestamp )->parse();
 			} else {
-				$label = wfMessage( 'protection-indicator-explanation-non-cascading-infinity',
-					 $level, $action )->parse();
+				$label = wfMessage( 'protectionindicator-extension-explanation-normal-infinity',
+					 $protection[1], $protection[0] )->parse();
 			}
 		}
+		$label .= ( $protection[5] ) ? $protection[5] : '';
 		$icon->setLabel( $label );
-		$out->setIndicators( [ 'protection-indicator-' . ( ( $cascading ) ? 'cascading-'
-		 : '' ) . $action => $icon ] );
+		return $icon;
 	}
 
 	/**
@@ -152,7 +139,65 @@ class ProtectionIndicatorHooks {
 	public static function suppressProtectionIndicator( $input, array $args,
 	\Parser $parser, \PPFrame $frame ) {
 		$out = $parser->getOutput();
-		$out->setExtensionData( 'protection-indicator-supress-all', true );
+		$out->setExtensionData( 'protectionindicator-extension-supress-all', true );
 		return '';
+	}
+
+	/**
+	 * Updates the values of portection and stores them in extension data
+	 * @param \Content $content Cotent object of page
+	 * @param \Title $title Title object of page
+	 * @param \ParserOutput $pOut ParserOutput object of the page
+	 */
+	public static function onContentAlterParserOutput( \Content $content, \Title $title,
+	 \ParserOutput $pOut ) {
+		global $wgRestrictionLevels;
+		// Get the log entry
+		$out1 = '';
+		$out2 = '';
+		$protectionIndicatorData = [];
+		LogEventsList::showLogExtract( $out1, 'protect', $title, '', [ 'lim' => 1 ] );
+		$pOut->setExtensionData( 'protectionindicator-extension-protect-log-data', $out1 );
+		LogEventsList::showLogExtract( $out2, 'stable', $title, '', [ 'lim' => 1 ] );
+		$pOut->setExtensionData( 'protectionindicator-extension-stability-log-data', $out2 );
+		// Start checking for the protection types
+		$restrictionTypes = $title->getRestrictionTypes();
+		foreach ( $restrictionTypes as $action ) {
+			$r = $title->getRestrictions( $action );
+			$rExpiry = $title->getRestrictionExpiry( $action );
+			foreach ( $wgRestrictionLevels as $level ) {
+				if ( in_array( $level, $r ) ) {
+					array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+				}
+			}
+		}
+		$rCascade = $title->getCascadeProtectionSources( true );
+		$r = $rCascade[1];
+		if ( $rCascade[0] ) {
+			foreach ( $restrictionTypes as $action ) {
+				if ( array_key_exists( $action, $r ) ) {
+					$r = $r[$action];
+					foreach ( $wgRestrictionLevels as $level ) {
+						if ( in_array( $level, $r ) ) {
+							array_push( $protectionIndicatorData, [ $action, $level, null , true, false ] );
+						}
+					}
+				}
+			}
+		}
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'FlaggedRevs' ) ) {
+			$r = FRPageConfig::getStabilitySettings( $title );
+			if ( $r['autoreview'] ) {
+				foreach ( $wgRestrictionLevels as $level ) {
+					if ( in_array( $level, $r['autoreview'] ) ) {
+						array_push( $protectionIndicatorData, [ 'edit-flaggedrev', $level,
+						 $r['expiry'], false, true ] );
+					}
+				}
+			}
+		}
+		$protectionIndicatorData = array_unique( $protectionIndicatorData, SORT_REGULAR );
+		$pOut->setExtensionData( 'protectionindicator-extension-protection-data',
+		 $protectionIndicatorData );
 	}
 }
