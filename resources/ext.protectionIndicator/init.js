@@ -12,7 +12,9 @@
 					anchor: true,
 					autoClose: true,
 					$autoCloseIgnore: e.target,
-					width: 600
+					width: ( window.screen.width > 600 ) ? 600 : 320,
+					// Mainly for viewer who will veiw this on mobile
+					classes: [ 'protectionindicator-extension-popup' ]
 				} );
 				$( e.target ).after( protectionExplanation.$element );
 			}

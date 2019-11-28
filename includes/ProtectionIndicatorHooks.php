@@ -50,7 +50,7 @@ class ProtectionIndicatorHooks {
 			return;
 		}
 		$pOut = $article->getParserOutput( $article->getRevision()->getID() );
-		// Maake sure protection icons have not been supressed.
+		// Make sure protection icons have not been supressed.
 		if ( $pOut->getExtensionData( 'protectionindicator-extension-supress-all' ) ) {
 			return;
 		}
@@ -79,7 +79,11 @@ class ProtectionIndicatorHooks {
 
 	/**
 	 * A function to create a padlock icon.
-	 * @param array $protection
+	 * @param array $protection 1st element is action,
+	 * 2nd element is level required to do action,
+	 * 3rd element is a boolean true if it is cascading protection
+	 * 4th element is a boolean true if it is a flaggedrevs protection
+	 * 5th element Log entry to be added, null if empty
 	 * @return object OOUI object of icon
 	 */
 	protected static function createIndicator( $protection ) {
@@ -189,7 +193,8 @@ class ProtectionIndicatorHooks {
 			$r = FRPageConfig::getStabilitySettings( $title );
 			if ( $r['autoreview'] ) {
 				foreach ( $wgRestrictionLevels as $level ) {
-					if ( in_array( $level, $r['autoreview'] ) ) {
+					if ( $r['autoreview'] == $level ||
+						( is_array( $r['autoreview'] ) && in_array( $level, $r['autoreview'] ) ) ) {
 						array_push( $protectionIndicatorData, [ 'edit-flaggedrev', $level,
 						 $r['expiry'], false, true ] );
 					}

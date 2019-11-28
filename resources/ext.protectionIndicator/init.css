@@ -1,12 +1,19 @@
-.protectionindicator-extension-footer,
-.protectionindicator-extension-reason {
-	margin: 0.5em 0 0.5em 0;
+.protectionindicator-extension-popup .comment--without-parentheses:before,
+.protectionindicator-extension-popup .mw-changeslist-links:before,
+.protectionindicator-extension-popup .mw-tag-markers:before {
+	content: '( ';
 }
 
-.protectionindicator-extension-log-link:before {
-	content: '(';
+.protectionindicator-extension-popup .comment--without-parentheses:after,
+.protectionindicator-extension-popup .mw-changeslist-links:after,
+.protectionindicator-extension-popup .mw-tag-markers:after {
+	content: ' )';
 }
 
-.protectionindicator-extension-log-link:after {
-	content: ')';
+.protectionindicator-extension-popup .mw-changeslist-links > span:not( :first-child ):before {
+	content: ' | ';
+}
+
+.protectionindicator-extension-popup .protectionindicator-extension-help-text .mw-logline-protect {
+	margin: 0.7em 0 0.7em 0;
 }
