@@ -21,6 +21,7 @@ use OOUI;
 use ExtensionRegistry;
 use FRPageConfig;
 use LogEventsList;
+use Language;
 
 class ProtectionIndicatorHooks {
 	/**
@@ -88,7 +89,9 @@ class ProtectionIndicatorHooks {
 	 */
 	protected static function createIndicator( $protection ) {
 		// infinity time should give us a empty string
-		$timestamp = wfTimestamp( TS_RFC2822, $protection[2] );
+		$o = new Language;
+		// @todo Figure out support for Bengali digits
+		$timestamp = $o->formatExpiry( $protection[2], true );
 		// classes are of the type
 		// protectionindicator-<cascading>-<flaggedrevs>-<action>-<level>
 		$icon = new OOUI\IconWidget( [
@@ -102,7 +105,7 @@ class ProtectionIndicatorHooks {
 			$label = wfMessage( 'protectionindicator-explanation-cascading',
 				 $protection[1], $protection[0] )->parse();
 		} elseif ( $protection[4] ) {
-			if ( strlen( $timestamp ) ) {
+			if ( $timestamp != 'infinite' ) {
 				$label = wfMessage( 'protectionindicator-explanation-flaggedrevs',
 					 $protection[1], $timestamp )->parse();
 			} else {
@@ -110,7 +113,7 @@ class ProtectionIndicatorHooks {
 					 $protection[1] )->parse();
 			}
 		} else {
-			if ( strlen( $timestamp ) ) {
+			if ( $timestamp != 'infinite' ) {
 				$label = wfMessage( 'protectionindicator-explanation-normal',
 					 $protection[1], $protection[0], $timestamp )->parse();
 			} else {

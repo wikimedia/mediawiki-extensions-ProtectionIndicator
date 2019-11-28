@@ -7,11 +7,13 @@ ProtectionIndicator is a personal project of mine where I try and create an exte
 * Git clone this repository into the ```extensions/``` directory of your mediawiki installation. 
 * Add ```wfLoadExtension( 'ProtectionIndicator' );``` to your ```LocalSettings.php``` file.
 * Navigate to a protected page on your wiki and check if the icons work.
-* Add css to ```MediaWiki:ProtectionIndicatorCustom.css``` to customise the lock icons per your taste. (The class names for the icons go like ```protection-indicator-<cascading>-<level>-<action>```.)
+* Add css to ```MediaWiki:ProtectionIndicatorCustom.css``` to customise the lock icons per your taste. (The class names for the icons go like ```protectionindicator-<cascading>-<flaggedrevs>-<level>-<action>```.)
 ## Configurational variables
 * ```$wgShowIconsOnMainPage``` Set to be false by default.
-* ```$ShowReasonInPopup``` Set to true by default.
+* ```$wgShowLogInPopup``` Set to true by default.
 ## Development
 * Install mediawiki-docker-dev and get an instance running
 * Follow the instructions for installation.
 * Start modifying the files :)
+## See Also
+* [Extension page on MediaWiki](https://www.mediawiki.org/wiki/Extension:ProtectionIndicator)
