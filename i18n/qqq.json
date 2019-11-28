@@ -4,10 +4,10 @@
 			"Sohom Datta"
 		]
 	},
-	"protectionindicator-extension-desc": "{{desc|name=Protection Indicator|url=https://mediawiki.org/wiki/Extension:ProtectionIndicator}}",
-	"protectionindicator-extension-explanation-cascading": "Informational text show in a popup to users on clicking on a cascading protection icon. $1 represents the action, $2 represents the level of protection.\nMessage supports wikitext.",
-	"protectionindicator-extension-explanation-normal": "Informational text show in a popup to users on clicking on a normal ( non cascading and non flaggedrevs) protection icon. $1 represents the action, $2 represents the level of protection and $3 represents the time at which the protection expires.\nMessage supports wikitext.",
-	"protectionindicator-extension-explanation-normal-infinity": "Informational text show in a popup to users on clicking on a normal ( non cascading and non flaggedrevs) protection icon on a page that has been protected with no expiry date. $1 represents the action, $2 represents the level of protection.\nMessage supports wikitext.",
-	"protectionindicator-extension-explanation-flaggedrevs": "Informational text show in a popup to users on clicking on a normal flaggedrevs protection icon. $1 represents the level of protection and $1 represents the time at which the protection expires.\nMessage supports wikitext.",
-	"protectionindicator-extension-explanation-flaggedrevs-infinity": "Informational text show in a popup to users on clicking on a normal flaggedrevs protection iconn a page that has been protected with no expiry date. $1 represents the level of protection and $2 represents the time at which the protection expires.\nMessage supports wikitext."
+	"protectionindicator-desc": "{{desc|name=Protection Indicator|url=https://mediawiki.org/wiki/Extension:ProtectionIndicator}}",
+	"protectionindicator-explanation-cascading": "Informational text show in a popup to users on clicking on a cascading protection icon. $1 represents the action, $2 represents the level of protection.\nMessage supports wikitext.",
+	"protectionindicator-explanation-normal": "Informational text show in a popup to users on clicking on a normal ( non cascading and non flaggedrevs) protection icon. $1 represents the action, $2 represents the level of protection and $3 represents the time at which the protection expires.\nMessage supports wikitext.",
+	"protectionindicator-explanation-normal-infinity": "Informational text show in a popup to users on clicking on a normal ( non cascading and non flaggedrevs) protection icon on a page that has been protected with no expiry date. $1 represents the action, $2 represents the level of protection.\nMessage supports wikitext.",
+	"protectionindicator-explanation-flaggedrevs": "Informational text show in a popup to users on clicking on a normal flaggedrevs protection icon. $1 represents the level of protection and $1 represents the time at which the protection expires.\nMessage supports wikitext.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Informational text show in a popup to users on clicking on a normal flaggedrevs protection iconn a page that has been protected with no expiry date. $1 represents the level of protection and $2 represents the time at which the protection expires.\nMessage supports wikitext."
 }

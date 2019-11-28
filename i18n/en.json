@@ -4,10 +4,10 @@
 			"Sohom Datta"
 		]
 	},
-	"protectionindicator-extension-desc": "An extension created for the purpose of adding protection indicators to pages.",
-	"protectionindicator-extension-explanation-cascading": "This page is cascading $2 protected until $3. The '$1' is right are required to $2 this page.",
-	"protectionindicator-extension-explanation-normal": "This page is $2 protected until $3. The '$1' right is required to $2 this page.",
-	"protectionindicator-extension-explanation-normal-infinity": "This page is $2 protected. The '$1' right is required to $2 this page. ",
-	"protectionindicator-extension-explanation-flaggedrevs": "This page is flaggedrevs protected until $2. The '$1' right is required to review your own edits.",
-	"protectionindicator-extension-explanation-flaggedrevs-infinity": "This page is pendingchanges. The '$1' right is required to review your own edits."
+	"protectionindicator-desc": "An extension created for the purpose of adding protection indicators to pages.",
+	"protectionindicator-explanation-cascading": "This page is cascading \"$2\" protected until \"$3\". The \"$1\" is right are required to \"$2\" this page.",
+	"protectionindicator-explanation-normal": "This page is \"$2\" protected until \"$3\". The \"$1\" right is required to \"$2\" this page.",
+	"protectionindicator-explanation-normal-infinity": "This page is \"$2\" protected. The \"$1\" right is required to \"$2\" this page. ",
+	"protectionindicator-explanation-flaggedrevs": "This page is flaggedrevs protected until \"$2\". The \"$1\" right is required to review your own edits.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "This page is pendingchanges. The \"$1\" right is required to review your own edits."
 }

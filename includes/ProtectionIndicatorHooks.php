@@ -51,23 +51,23 @@ class ProtectionIndicatorHooks {
 		}
 		$pOut = $article->getParserOutput( $article->getRevision()->getID() );
 		// Make sure protection icons have not been supressed.
-		if ( $pOut->getExtensionData( 'protectionindicator-extension-supress-all' ) ) {
+		if ( $pOut->getExtensionData( 'protectionindicator-supress-all' ) ) {
 			return;
 		}
 		// Load the data of the extension
-		$protectionData = $pOut->getExtensionData( 'protectionindicator-extension-protection-data' );
+		$protectionData = $pOut->getExtensionData( 'protectionindicator-protection-data' );
 		$indicators = [];
 		foreach ( $protectionData as $protection ) {
 			if ( $config->get( 'ShowLogInPopup' ) && $protection[0] == 'edit-flaggedrev' ) {
 				array_push( $protection,
-					$pOut->getExtensionData( 'protectionindicator-extension-stability-log-data' ) );
+					$pOut->getExtensionData( 'protectionindicator-stability-log-data' ) );
 			} elseif ( $config->get( 'ShowLogInPopup' ) ) {
 				array_push( $protection,
-					$pOut->getExtensionData( 'protectionindicator-extension-protect-log-data' ) );
+					$pOut->getExtensionData( 'protectionindicator-protect-log-data' ) );
 			} else {
 				array_push( $protection, null );
 			}
-			$indicators[ 'protectionindicator-extension-' .
+			$indicators[ 'protectionindicator-' .
 			 $protection[0] ] = self::createIndicator( $protection );
 		}
 		$out->enableOOUI();
@@ -90,31 +90,31 @@ class ProtectionIndicatorHooks {
 		// infinity time should give us a empty string
 		$timestamp = wfTimestamp( TS_RFC2822, $protection[2] );
 		// classes are of the type
-		// protectionindicator-extension-<cascading>-<flaggedrevs>-<action>-<level>
+		// protectionindicator-<cascading>-<flaggedrevs>-<action>-<level>
 		$icon = new OOUI\IconWidget( [
 					'icon' => 'lock',
 					'infusable' => true,
-					'classes' => [ 'protectionindicator-extension-icon', 'protectionindicator-extension-'
+					'classes' => [ 'protectionindicator-icon', 'protectionindicator-'
 					. ( ( $protection[3] ) ? 'cascading-' : '' ) .
 					( ( $protection[4] ) ? 'flaggedrevs-' : '' ) . $protection[1] . '-' . $protection[0] ]
 					] );
 		if ( $protection[3] ) {
-			$label = wfMessage( 'protectionindicator-extension-explanation-cascading',
+			$label = wfMessage( 'protectionindicator-explanation-cascading',
 				 $protection[1], $protection[0] )->parse();
 		} elseif ( $protection[4] ) {
 			if ( strlen( $timestamp ) ) {
-				$label = wfMessage( 'protectionindicator-extension-explanation-flaggedrevs',
+				$label = wfMessage( 'protectionindicator-explanation-flaggedrevs',
 					 $protection[1], $timestamp )->parse();
 			} else {
-				$label = wfMessage( 'protectionindicator-extension-explanation-flaggedrevs-infinity',
+				$label = wfMessage( 'protectionindicator-explanation-flaggedrevs-infinity',
 					 $protection[1] )->parse();
 			}
 		} else {
 			if ( strlen( $timestamp ) ) {
-				$label = wfMessage( 'protectionindicator-extension-explanation-normal',
+				$label = wfMessage( 'protectionindicator-explanation-normal',
 					 $protection[1], $protection[0], $timestamp )->parse();
 			} else {
-				$label = wfMessage( 'protectionindicator-extension-explanation-normal-infinity',
+				$label = wfMessage( 'protectionindicator-explanation-normal-infinity',
 					 $protection[1], $protection[0] )->parse();
 			}
 		}
@@ -143,7 +143,7 @@ class ProtectionIndicatorHooks {
 	public static function suppressProtectionIndicator( $input, array $args,
 	\Parser $parser, \PPFrame $frame ) {
 		$out = $parser->getOutput();
-		$out->setExtensionData( 'protectionindicator-extension-supress-all', true );
+		$out->setExtensionData( 'protectionindicator-supress-all', true );
 		return '';
 	}
 
@@ -161,9 +161,9 @@ class ProtectionIndicatorHooks {
 		$out2 = '';
 		$protectionIndicatorData = [];
 		LogEventsList::showLogExtract( $out1, 'protect', $title, '', [ 'lim' => 1 ] );
-		$pOut->setExtensionData( 'protectionindicator-extension-protect-log-data', $out1 );
+		$pOut->setExtensionData( 'protectionindicator-protect-log-data', $out1 );
 		LogEventsList::showLogExtract( $out2, 'stable', $title, '', [ 'lim' => 1 ] );
-		$pOut->setExtensionData( 'protectionindicator-extension-stability-log-data', $out2 );
+		$pOut->setExtensionData( 'protectionindicator-stability-log-data', $out2 );
 		// Start checking for the protection types
 		$restrictionTypes = $title->getRestrictionTypes();
 		foreach ( $restrictionTypes as $action ) {
@@ -202,7 +202,7 @@ class ProtectionIndicatorHooks {
 			}
 		}
 		$protectionIndicatorData = array_unique( $protectionIndicatorData, SORT_REGULAR );
-		$pOut->setExtensionData( 'protectionindicator-extension-protection-data',
+		$pOut->setExtensionData( 'protectionindicator-protection-data',
 		 $protectionIndicatorData );
 	}
 }
