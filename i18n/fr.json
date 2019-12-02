@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p"
+		]
+	},
+	"protectionindicator-desc": "Une extension créée dans le but d’ajouter des indicateurs de protection aux pages.",
+	"protectionindicator-explanation-cascading": "Cette page est protégée en cascade contre l’action « $2 » jusqu’au « $3 ». Le droit « $1 » est nécessaire pour « $2 »  cette page.",
+	"protectionindicator-explanation-normal": "Cette page est protégée contre l’action « $2 » jusqu’au « $3 ». Le droit « $1 » est nécessaire pour « $2 »  cette page.",
+	"protectionindicator-explanation-normal-infinity": "Cette page est protégée contre l’action « $2 ». Le droit « $1 » est nécessaire pour « $2 »  cette page.",
+	"protectionindicator-explanation-flaggedrevs": "Cette page est protégée contre la relecture jusqu’au « $2 ». Le droit « $1 » est nécessaire pour relire vos propres modifications.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Cette page a des modifications en attente. Le droit « $1 » est nécessaire pour relire vos propres modifications."
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"protectionindicator-desc": "امتداد تم إنشاؤه بغرض إضافة مؤشرات الحماية إلى الصفحات.",
+	"protectionindicator-explanation-cascading": "هذه الصفحة متتالية \"$2\" محمية حتى \"$3\"، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
+	"protectionindicator-explanation-normal": "هذه الصفحة \"$2\" محمية حتى \"$3\"، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-infinity": "هذه الصفحة \"$2\" محمية، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
+	"protectionindicator-explanation-flaggedrevs": "هذه الصفحة محميّة بواسطة المراجعات المعلمة حتى \"$2\"؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "هذه الصفحة تغييرات معلقة؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك."
+}
