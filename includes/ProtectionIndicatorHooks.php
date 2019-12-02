@@ -102,8 +102,8 @@ class ProtectionIndicatorHooks {
 					( ( $protection[4] ) ? 'flaggedrevs-' : '' ) . $protection[1] . '-' . $protection[0] ]
 					] );
 		if ( $protection[3] ) {
-			$label = wfMessage( 'protectionindicator-explanation-cascading',
-				 $protection[1], $protection[0] )->parse();
+			$label = wfMessage( 'protectionindicator-explanation-cascading-' . $protection[0],
+				 $protection[1] )->parse();
 		} elseif ( $protection[4] ) {
 			if ( $timestamp != 'infinite' ) {
 				$label = wfMessage( 'protectionindicator-explanation-flaggedrevs',
@@ -114,11 +114,11 @@ class ProtectionIndicatorHooks {
 			}
 		} else {
 			if ( $timestamp != 'infinite' ) {
-				$label = wfMessage( 'protectionindicator-explanation-normal',
-					 $protection[1], $protection[0], $timestamp )->parse();
+				$label = wfMessage( 'protectionindicator-explanation-normal-' . $protection[0],
+					 $protection[1], $timestamp )->parse();
 			} else {
-				$label = wfMessage( 'protectionindicator-explanation-normal-infinity',
-					 $protection[1], $protection[0] )->parse();
+				$label = wfMessage( 'protectionindicator-explanation-normal-infinity-' . $protection[0],
+					 $protection[1] )->parse();
 			}
 		}
 		$label .= ( $protection[5] ) ? $protection[5] : '';
