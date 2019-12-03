@@ -24,9 +24,6 @@
 			"value": true
 		}
 	},
-	"ExtensionMessagesFiles": {
-		"ProtectionIndicatorAlias": "includes/ProtectionIndicator.i18n.magic.php"
-	},
 	"Hooks": {
 		"ArticleViewHeader": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onArticleViewHeader",
 		"ParserFirstCallInit": "MediaWiki\\Extension\\ProtectionIndicator\\ProtectionIndicatorHooks::onParserFirstCallInit",
