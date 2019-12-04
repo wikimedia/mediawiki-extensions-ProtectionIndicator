@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"protectionindicator-desc": "Sayfalara koruma göstergeleri eklemek amacıyla oluşturulmuş bir uzantı.",
+	"protectionindicator-explanation-cascading-edit": "Bu sayfa, \"$2\"'ye kadar \"düzenle\" koruma altındadır. Bu sayfayı \"düzenlemek\" için \"$1\" hakkı gerekiyor.",
+	"protectionindicator-explanation-cascading-move": "Bu sayfa, \"$2\" ye kadar korumalı \"taşıma\" olarak korunmaktadır. Bu sayfayı \"taşımak\" için \"$1\" olmanız gereklidir.",
+	"protectionindicator-explanation-normal-edit": "Bu sayfa $2 olana kadar \"düzenleme\" korumalıdır. Bu sayfayı \"düzenlemek\" için \"$1\" hakkı gerekiyor.",
+	"protectionindicator-explanation-normal-move": "Bu sayfa $2'ye kadar \"taşıma\" korumalı. Bu sayfayı \"taşımak\" için \"$1\" hakkı gerekiyor.",
+	"protectionindicator-explanation-normal-create": "Bu sayfa $2'ye kadar \"oluşturma\" ile korunmaktadır. Bu sayfayı \"oluşturmak\" için \"$1\" hakkı gerekir.",
+	"protectionindicator-explanation-normal-upload": "Bu dosya \"yükleme\" $2'ye kadar korunmaktadır. Bu dosyayı \"yüklemek\" için \"$1\" hakkı gerekir.",
+	"protectionindicator-explanation-normal-infinity-edit": "Bu sayfa \"düzenleme\" korumalıdır. Bu sayfayı \"düzenlemek\" için \"$1\" hakkı gerekiyor.",
+	"protectionindicator-explanation-normal-infinity-move": "Bu sayfa \"taşıma\" korumalıdır. Bu sayfayı \"taşımak\" için \"$1\" hakkı gerekiyor.",
+	"protectionindicator-explanation-normal-infinity-create": "Bu sayfa \"oluştur\" korumalıdır. Bu sayfayı \"oluşturmak\" için \"$1\" hakkı gerekir.",
+	"protectionindicator-explanation-normal-infinity-upload": "Bu dosya \"yükleme\" korumalıdır. Bu dosyayı \"yüklemek\" için \"$1\" hakkı gerekir.",
+	"protectionindicator-explanation-flaggedrevs": "Bu sayfa $2'ye kadar korumalı olarak işaretlendi. Kendi düzenlemelerinizi gözden geçirmek için \"$1\" hakkı gerekir.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Bu sayfa işaretlendi korumalıdır. Kendi düzenlemelerinizi gözden geçirmek için \"$1\" hakkı gerekir."
+}

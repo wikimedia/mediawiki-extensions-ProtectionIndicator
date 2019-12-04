@@ -4,5 +4,17 @@
 			"Jon Harald Søby"
 		]
 	},
-	"protectionindicator-desc": "En utvidelse for å legge til indikatorer for beskyttelse på sider."
+	"protectionindicator-desc": "En utvidelse for å legge til indikatorer for beskyttelse på sider.",
+	"protectionindicator-explanation-cascading-edit": "Denne siden har dypybeskyttelse mot redigering fram til $2. Rettigheten «$1» kreves for å redigere denne siden.",
+	"protectionindicator-explanation-cascading-move": "Denne siden har dypbeskyttelse mot flytting fram til $2. Rettigheten «$1» kreves for å flytte denne siden.",
+	"protectionindicator-explanation-normal-edit": "Denne siden har beskyttelse mot redigering fram til $2. Rettigheten «$1» kreves for å redigere denne siden.",
+	"protectionindicator-explanation-normal-move": "Denne siden har beskyttelse mot flytting fram til $2. Rettigheten «$1» kreves for å flytte denne siden.",
+	"protectionindicator-explanation-normal-create": "Denne siden er beskyttet mot oppretting fram til $2. Rettigheten «$1» kreves for å opprette denne siden.",
+	"protectionindicator-explanation-normal-upload": "Denne fila er beskyttet mot opplasting fram til $2. Rettigheten «$1» kreves for å laste opp denne fila.",
+	"protectionindicator-explanation-normal-infinity-edit": "Denne siden er beskyttet mot redigering. Rettigheten «$1» kreves for å redigere denne siden.",
+	"protectionindicator-explanation-normal-infinity-move": "Denne siden er beskyttet mot flytting. Rettigheten «$1» kreves for å flytte denne siden.",
+	"protectionindicator-explanation-normal-infinity-create": "Denne siden er beskyttet mot oppretting. Rettigheten «$1» kreves for å opprette denne siden.",
+	"protectionindicator-explanation-normal-infinity-upload": "Denne fila er beskyttet mot opplasting. Rettigheten «$1» kreves for å laste opp denne fila.",
+	"protectionindicator-explanation-flaggedrevs": "Denne siden er flaggedrevs-beskyttet fram til $2. Rettigheten «$1» kreves for å gjennomgå dine egne redigeringer.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Denne siden er flaggedrevs-beskyttet. Rettigheten «$1» kreves for å gjennomgå dine egne redigeringer."
 }

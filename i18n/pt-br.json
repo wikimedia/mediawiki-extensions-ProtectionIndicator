@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"protectionindicator-desc": "Uma extensão criada com o objetivo de adicionar indicadores de proteção às páginas.",
+	"protectionindicator-explanation-cascading-edit": "Esta página está em protegida de \"edição\" em cascata até \"$2\". É necessário \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-cascading-move": "Esta página está em protegida de \"movimento\" em cascata até \"$2\". É necessário \"$1\" para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-edit": "Esta página está protegida de \"edição\" até $2. O direito \"$1\" é necessário para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-move": "Esta página está protegida de \"movimentação\", até $2. O direito \"$1\" é necessário para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-create": "Esta página é protegida de \"criação\" até $2. O direito \"$1\" é necessário para \"criar\" esta página.",
+	"protectionindicator-explanation-normal-upload": "Este arquivo é protegida de \"carregamento\" até $2. O direito \"$1\" é necessário para \"fazer upload\" deste arquivo.",
+	"protectionindicator-explanation-normal-infinity-edit": "Esta página está protegida de \"edição\". O direito \"$1\" é necessário para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-move": "Esta página está protegida de \"movimentação\". O direito \"$1\" é necessário para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-infinity-create": "Esta página é protegida de \"criação\". O direito \"$1\" é necessário para \"criar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-upload": "Este arquivo está protegido de \"carregamento\". O direito \"$1\" é necessário para \"fazer carregamento\" deste arquivo.",
+	"protectionindicator-explanation-flaggedrevs": "Esta página está sinalizada como protegida até $2. O direito \"$1\" é necessário para revisar suas próprias edições.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Esta página está sinalizada como protegida. O direito \"$1\" é necessário para revisar suas próprias edições."
+}

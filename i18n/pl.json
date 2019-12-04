@@ -4,8 +4,5 @@
 			"Rail"
 		]
 	},
-	"protectionindicator-desc": "Rozszerzenie stworzone w celu dodania wskaźników zabezpieczenia na stronach",
-	"protectionindicator-explanation-cascading": "Ta strona jest dziedzicznie zabezpieczona na poziomie „$2” do „$3”. Do wykonania akcji „$2” na tej stronie potrzebne jest uprawnienie „$1”.",
-	"protectionindicator-explanation-normal": "Ta strona jest zabezpieczona na poziomie „$2” do „$3”. Do wykonania akcji „$2” na tej stronie potrzebne jest uprawnienie „$1”.",
-	"protectionindicator-explanation-normal-infinity": "Ta strona jest zabezpieczona na poziomie „$2”. Do wykonania akcji „$2” na tej stronie potrzebne jest uprawnienie „$1”."
+	"protectionindicator-desc": "Rozszerzenie stworzone w celu dodania wskaźników zabezpieczenia na stronach"
 }

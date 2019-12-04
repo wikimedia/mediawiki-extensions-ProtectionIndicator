@@ -5,9 +5,16 @@
 		]
 	},
 	"protectionindicator-desc": "امتداد تم إنشاؤه بغرض إضافة مؤشرات الحماية إلى الصفحات.",
-	"protectionindicator-explanation-cascading": "هذه الصفحة متتالية \"$2\" محمية حتى \"$3\"، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
-	"protectionindicator-explanation-normal": "هذه الصفحة \"$2\" محمية حتى \"$3\"، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
-	"protectionindicator-explanation-normal-infinity": "هذه الصفحة \"$2\" محمية، \"$1\" هو الصحيح المطلوب ل\"$2\" هذه الصفحة.",
-	"protectionindicator-explanation-flaggedrevs": "هذه الصفحة محميّة بواسطة المراجعات المعلمة حتى \"$2\"؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك.",
-	"protectionindicator-explanation-flaggedrevs-infinity": "هذه الصفحة تغييرات معلقة؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك."
+	"protectionindicator-explanation-cascading-edit": "هذه الصفحة تتالي \"تحرير\" محمية حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لتحرير\" هذه الصفحة.",
+	"protectionindicator-explanation-cascading-move": "هذه الصفحة تتالي \"نقل\" محمية حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لنقل\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-edit": "هذه الصفحة \"تحرير\" محمية حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لتحرير\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-move": "هذه الصفحة \"نقل\" محمية حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لنقل\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-create": "هذه الصفحة \"إنشاء\" محمية حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لإنشاء\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-upload": "هذا الملف \"رفع\" محمي حتى \"$2\"؛ مطلوب \"$1\" الصحيح \"لرفع\" هذا الملف.",
+	"protectionindicator-explanation-normal-infinity-edit": "هذه الصفحة \"تحرير\" محمية؛ مطلوب \"$1\" الصحيح \"لتحرير\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-infinity-move": "هذه الصفحة \"نقل\" محمية؛ مطلوب \"$1\" الصحيح \"لنقل\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-infinity-create": "هذه الصفحة \"إنشاء\" محمية؛ مطلوب \"$1\" الصحيح \"لإنشاء\" هذه الصفحة.",
+	"protectionindicator-explanation-normal-infinity-upload": "هذا الملف \"رفع\" محمي؛ مطلوب \"$1\" الصحيح \"لرفع\" هذا الملف.",
+	"protectionindicator-explanation-flaggedrevs": "هذه الصفحة محميّة بواسطة المراجعات المعلمة حتى $2؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "هذه الصفحة محميّة بواسطة المراجعات المعلمة؛ مطلوب \"$1\" لمراجعة التعديلات الخاصة بك."
 }

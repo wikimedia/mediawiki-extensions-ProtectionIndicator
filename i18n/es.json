@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"protectionindicator-explanation-normal-upload": "Este archivo está protegido contra sobrescrituras hasta el $2. Hace falta el permiso «$1» para sobrescribir el archivo."
+}

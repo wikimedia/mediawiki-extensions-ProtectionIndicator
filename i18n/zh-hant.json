@@ -5,9 +5,16 @@
 		]
 	},
 	"protectionindicator-desc": "為頁面添加保護指示所建立的擴充套件。",
-	"protectionindicator-explanation-cascading": "此頁面在「$3」之前會受連鎖「$2」保護。該$2頁面需要「$1」權限。",
-	"protectionindicator-explanation-normal": "此頁面在「$3」之前會受「$2」保護。該$2頁面需要「$1」權限。",
-	"protectionindicator-explanation-normal-infinity": "此頁面的保護級別為「$2」。該$2頁面需要「$1」權限。",
-	"protectionindicator-explanation-flaggedrevs": "此頁面在「$2」之前被標記為保護。需要「$1」權限才能檢閱您自己的編輯內容。",
-	"protectionindicator-explanation-flaggedrevs-infinity": "此頁面為修訂巡查。需要「$1」權限才能檢閱您自己的編輯內容。"
+	"protectionindicator-explanation-cascading-edit": "此頁面在$2之前受連鎖「編輯」保護。需要「$1」權限才能編輯此頁面。",
+	"protectionindicator-explanation-cascading-move": "此頁面在$2之前受連鎖「移動」保護。需要「$1」權限才能移動此頁面。",
+	"protectionindicator-explanation-normal-edit": "此頁面在$2之前受「編輯」保護。需要「$1」權限才能編輯此頁面。",
+	"protectionindicator-explanation-normal-move": "此頁面在$2之前受「移動」保護。需要「$1」權限才能移動此頁面。",
+	"protectionindicator-explanation-normal-create": "此頁面在$2之前受「新建」保護。需要「$1」權限才能新建此頁面。",
+	"protectionindicator-explanation-normal-upload": "此檔案在$2之前受「更新」保護。需要「$1」權限才能更新此檔案。",
+	"protectionindicator-explanation-normal-infinity-edit": "此頁面受「編輯」保護。需要「$1」權限才能編輯此頁面。",
+	"protectionindicator-explanation-normal-infinity-move": "此頁面受「移動」保護。需要「$1」權限才能移動此頁面。",
+	"protectionindicator-explanation-normal-infinity-create": "此頁面受「新建」保護。需要「$1」權限才能新建此頁面。",
+	"protectionindicator-explanation-normal-infinity-upload": "此檔案受「更新」保護。需要「$1」權限才能更新此檔案。",
+	"protectionindicator-explanation-flaggedrevs": "此頁面在$2之前被標記為保護。需要「$1」權限才能檢閱您自己的編輯內容。",
+	"protectionindicator-explanation-flaggedrevs-infinity": "此頁面被標記為保護。需要「$1」權限才能檢閱您自己的編輯內容。"
 }
