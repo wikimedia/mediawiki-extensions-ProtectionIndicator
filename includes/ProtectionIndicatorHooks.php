@@ -198,8 +198,10 @@ class ProtectionIndicatorHooks {
 				foreach ( $wgRestrictionLevels as $level ) {
 					if ( $r['autoreview'] == $level ||
 						( is_array( $r['autoreview'] ) && in_array( $level, $r['autoreview'] ) ) ) {
-						array_push( $protectionIndicatorData, [ 'edit-flaggedrev', $level,
+						array_push( $protectionIndicatorData, [ 'edit', $level,
 						 $r['expiry'], false, true ] );
+						// not auto-review since, we already have a
+					// true/false parameter denoting flaggedrevs
 					}
 				}
 			}
