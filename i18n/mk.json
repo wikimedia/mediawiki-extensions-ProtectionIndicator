@@ -5,6 +5,16 @@
 		]
 	},
 	"protectionindicator-desc": "Додаток за ставање показатели за заштита на страници.",
+	"protectionindicator-explanation-cascading-edit": "Оваа страница е каскадно заштитена од уредување во траење до „$2“. За нејзино уредување е потребно правото „$1“.",
+	"protectionindicator-explanation-cascading-move": "Оваа страница е каскадно заштитена од преместување во траење до „$2“. За нејзино преместување е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-edit": "Оваа страница е заштитена од уредување во траење до $2. За нејзино уредување е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-move": "Оваа страница е заштитена од преместување во траење до $2. За нејзино преместување е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-create": "Оваа страница е заштитена од создавање во траење до $2. За нејзино создавање е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-upload": "Оваа податотека е заштитена од подигање во траење до „$2“. За нејзино подигање е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-infinity-edit": "Оваа страница е заштитена од уредување. За нејзино уредување е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-infinity-move": "Оваа страница е заштитена од преместување. За нејзино преместување е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-infinity-create": "Оваа страница е заштитена од создавање. За нејзино создавање е потребно правото „$1“.",
+	"protectionindicator-explanation-normal-infinity-upload": "Оваа податотека е заштитена од подигање. За нејзино подигање е потребно правото „$1“.",
 	"protectionindicator-explanation-flaggedrevs": "Оваа страница е заштитена со означени преработки со траење до $2. Потребно ви е правото „$1“ за да ги прегледувате своите уредувања.",
-	"protectionindicator-explanation-flaggedrevs-infinity": "Промените на оваа страница се во исчекување. Потребно ви е правото „$1“ за да ги прегледувате своите уредувања."
+	"protectionindicator-explanation-flaggedrevs-infinity": "Означените преработки на страницава се заштитени. Потребно ви е правото „$1“ за да ги прегледувате своите уредувања."
 }
