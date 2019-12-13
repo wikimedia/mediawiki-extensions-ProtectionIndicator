@@ -8,7 +8,7 @@ sublime-*
 \#*#
 .#*
 /.idea
-.vscode
+.vscode/
 
 # Install and build artifacts
 node_modules
