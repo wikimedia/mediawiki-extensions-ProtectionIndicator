@@ -18,7 +18,7 @@
 	"protectionindicator-explanation-normal-infinity-edit": "Cette page est protégée en « modification ». Le droit « $1 » est nécessaire pour « modifier » cette page.",
 	"protectionindicator-explanation-normal-infinity-move": "Cette page est protégée contre le « déplacement ». Le droit « $1 » est nécessaire pour « déplacer » cette page.",
 	"protectionindicator-explanation-normal-infinity-create": "Cette page est protégée en « création ». Le droit « $1 » est nécessaire pour « créer » cette page.",
-	"protectionindicator-explanation-normal-infinity-upload": "Ce fichier est protégé contre le « téléversement ». Le droit « $1 » est nécessaire pour « téléverser » ce fichier.",
+	"protectionindicator-explanation-normal-infinity-upload": "Ce fichier est protégé contre le « téléversement ». Le droit « $1 » est nécessaire pour « téléverser » ce fichier.",
 	"protectionindicator-explanation-flaggedrevs": "Cette page est protégée contre la relecture jusqu’au $2. Le droit « $1 » est nécessaire pour relire vos propres modifications.",
 	"protectionindicator-explanation-flaggedrevs-infinity": "Cette page est protégée contre les relectures. Le droit « $1 » est nécessaire pour relire vos propres modifications."
 }
