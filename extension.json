@@ -5,7 +5,7 @@
 	],
 	"version": "0.1",
 	"url": "https://www.mediawiki.org/wiki/Extension:ProtectionIndicator",
-	"descriptionmsg": "protectionindicator-extension-desc",
+	"descriptionmsg": "protectionindicator-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
