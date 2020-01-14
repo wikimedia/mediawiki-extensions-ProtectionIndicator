@@ -17,11 +17,11 @@
 
 namespace MediaWiki\Extension\ProtectionIndicator;
 
-use OOUI;
 use ExtensionRegistry;
 use FRPageConfig;
-use LogEventsList;
 use Language;
+use LogEventsList;
+use OOUI;
 
 class ProtectionIndicatorHooks {
 	/**
