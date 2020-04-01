@@ -5,8 +5,8 @@
 		]
 	},
 	"protectionindicator-desc": "An extension created for the purpose of adding protection indicators to pages.",
-	"protectionindicator-explanation-cascading-edit": "This page is cascading \"edit\" protected until \"$2\". The \"$1\" is right are required to \"edit\" this page.",
-	"protectionindicator-explanation-cascading-move": "This page is cascading \"move\" protected until \"$2\". The \"$1\" is right are required to \"move\" this page.",
+	"protectionindicator-explanation-cascading-edit": "This page is cascading \"edit\" protected until \"$2\". The \"$1\" right are required to \"edit\" this page.",
+	"protectionindicator-explanation-cascading-move": "This page is cascading \"move\" protected until \"$2\". The \"$1\" right are required to \"move\" this page.",
 	"protectionindicator-explanation-normal-edit": "This page is \"edit\" protected until $2. The \"$1\" right is required to \"edit\" this page.",
 	"protectionindicator-explanation-normal-move": "This page is \"move\" protected until $2. The \"$1\" right is required to \"move\" this page.",
 	"protectionindicator-explanation-normal-create": "This page is \"create\" protected until $2. The \"$1\" right is required to \"create\" this page.",
