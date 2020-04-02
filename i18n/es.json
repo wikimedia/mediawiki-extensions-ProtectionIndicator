@@ -4,5 +4,6 @@
 			"Fitoschido"
 		]
 	},
+	"protectionindicator-desc": "Una extensión creada con el fin de añadir indicadores de protección a las páginas.",
 	"protectionindicator-explanation-normal-upload": "Este archivo está protegido contra sobrescrituras hasta el $2. Hace falta el permiso «$1» para sobrescribir el archivo."
 }
