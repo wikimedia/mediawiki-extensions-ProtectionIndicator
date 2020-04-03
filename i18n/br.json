@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fulup"
+		]
+	},
+	"protectionindicator-explanation-cascading-edit": "Gwarezet eo ar bajenn-mañ ouzh ar \"c'hemmoù\" dre skalierad betek \"$2\". Rekis eo ar gwir \"$1\" evit gallout \"kemmañ\" ar bajenn-mañ.",
+	"protectionindicator-explanation-cascading-move": "Gwarezet eo ar bajenn-mañ ouzh an \"dilec'hiadurioù\" dre skalierad betek \"$2\". Rekis eo ar gwir \"$1\" evit gallout \"dilec'hiañ\" ar bajenn-mañ."
+}
