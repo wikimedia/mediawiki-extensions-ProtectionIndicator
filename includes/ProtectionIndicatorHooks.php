@@ -47,10 +47,11 @@ class ProtectionIndicatorHooks {
 		}
 		// Check if Revision of the article can be accessed,
 		// if we cannot we are probably on the wrong page
-		if ( !$article->getRevision() ) {
+		$revisionRecord = $article->getPage()->getRevisionRecord();
+		if ( !$revisionRecord ) {
 			return;
 		}
-		$pOut = $article->getParserOutput( $article->getRevision()->getID() );
+		$pOut = $article->getParserOutput( $revisionRecord->getID() );
 		// Make sure protection icons have not been supressed.
 		if ( $pOut->getExtensionData( 'protectionindicator-supress-all' ) ) {
 			return;
