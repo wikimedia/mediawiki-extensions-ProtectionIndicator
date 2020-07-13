@@ -1,11 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aaribaud",
-			"Gomoko",
 			"Thibaut120094",
-			"Verdy p",
-			"Wladek92"
+			"Verdy p"
 		]
 	},
 	"protectionindicator-desc": "Une extension créée dans le but d’ajouter des indicateurs de protection aux pages.",
