@@ -4,5 +4,17 @@
 			"Rail"
 		]
 	},
-	"protectionindicator-desc": "Rozszerzenie stworzone w celu dodania wskaźników zabezpieczenia na stronach"
+	"protectionindicator-desc": "Rozszerzenie stworzone w celu dodania wskaźników zabezpieczenia na stronach",
+	"protectionindicator-explanation-cascading-edit": "Ta strona została dziedzicznie zabezpieczona („edit”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „edit” na tej stronie.",
+	"protectionindicator-explanation-cascading-move": "Ta strona została dziedzicznie zabezpieczona („move”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „move” na tej stronie.",
+	"protectionindicator-explanation-normal-edit": "Ta strona została zabezpieczona („edit”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „edit” na tej stronie.",
+	"protectionindicator-explanation-normal-move": "Ta strona została zabezpieczona („move”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „move” na tej stronie.",
+	"protectionindicator-explanation-normal-create": "Ta strona została zabezpieczona („protect”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „create” na tej stronie.",
+	"protectionindicator-explanation-normal-upload": "Ten plik został zabezpieczony („upload”) do $2. Uprawnienie „$1” jest wymagane aby wykonać operację „upload” na tym pliku.",
+	"protectionindicator-explanation-normal-infinity-edit": "Ta strona została zabezpieczona („edit”). Uprawnienie „$1” jest wymagane aby wykonać operację „edit” na tej stronie.",
+	"protectionindicator-explanation-normal-infinity-move": "Ta strona została zabezpieczona („move”). Uprawnienie „$1” jest wymagane aby wykonać operację „move” na tej stronie.",
+	"protectionindicator-explanation-normal-infinity-create": "Ta strona została zabezpieczona („create”). Uprawnienie „$1” jest wymagane aby wykonać operację „create” na tej stronie.",
+	"protectionindicator-explanation-normal-infinity-upload": "Ten plik został zabezpieczony („upload”). Uprawnienie „$1” jest wymagane aby wykonać operację „upload” na tym pliku.",
+	"protectionindicator-explanation-flaggedrevs": "Ta strona została zabezpieczona (flaggedrevs) do $2. Uprawnienie „$1” jest wymagane aby przejrzeć własne edycje.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Ta strona została zabezpieczona (flaggedrevs). Uprawnienie „$1” jest wymagane aby przejrzeć własne edycje."
 }
