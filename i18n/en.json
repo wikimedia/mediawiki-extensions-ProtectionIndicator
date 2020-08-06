@@ -11,10 +11,10 @@
 	"protectionindicator-explanation-normal-move": "This page is \"move\" protected until $2. The \"$1\" right is required to \"move\" this page.",
 	"protectionindicator-explanation-normal-create": "This page is \"create\" protected until $2. The \"$1\" right is required to \"create\" this page.",
 	"protectionindicator-explanation-normal-upload": "This file is \"upload\" protected until $2. The \"$1\" right is required to \"upload\" this file.",
-	"protectionindicator-explanation-normal-infinity-edit": "This page is \"edit\" protected. The \"$1\" right is required to \"edit\" this page. ",
-	"protectionindicator-explanation-normal-infinity-move": "This page is \"move\" protected. The \"$1\" right is required to \"move\" this page. ",
-	"protectionindicator-explanation-normal-infinity-create": "This page is \"create\" protected. The \"$1\" right is required to \"create\" this page. ",
-	"protectionindicator-explanation-normal-infinity-upload": "This file is \"upload\" protected. The \"$1\" right is required to \"upload\" this file. ",
+	"protectionindicator-explanation-normal-infinity-edit": "This page is \"edit\" protected. The \"$1\" right is required to \"edit\" this page.",
+	"protectionindicator-explanation-normal-infinity-move": "This page is \"move\" protected. The \"$1\" right is required to \"move\" this page.",
+	"protectionindicator-explanation-normal-infinity-create": "This page is \"create\" protected. The \"$1\" right is required to \"create\" this page.",
+	"protectionindicator-explanation-normal-infinity-upload": "This file is \"upload\" protected. The \"$1\" right is required to \"upload\" this file.",
 	"protectionindicator-explanation-flaggedrevs": "This page is flaggedrevs protected until $2. The \"$1\" right is required to review your own edits.",
 	"protectionindicator-explanation-flaggedrevs-infinity": "This page is flaggedrevs protected. The \"$1\" right is required to review your own edits."
 }
