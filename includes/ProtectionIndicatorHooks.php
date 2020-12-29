@@ -86,7 +86,7 @@ class ProtectionIndicatorHooks {
 	 * 3rd element is a boolean true if it is cascading protection
 	 * 4th element is a boolean true if it is a flaggedrevs protection
 	 * 5th element Log entry to be added, null if empty
-	 * @return object OOUI object of icon
+	 * @return OOUI\IconWidget OOUI object of icon
 	 */
 	protected static function createIndicator( $protection ) {
 		// infinity time should give us a empty string
