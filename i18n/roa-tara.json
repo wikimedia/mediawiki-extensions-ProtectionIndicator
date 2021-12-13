@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"protectionindicator-desc": "'N'estenzione ccrejate pe aggiungere indicature de protezzione a le pàggene.",
+	"protectionindicator-explanation-cascading-edit": "Sta pàgene jè pruttete da le \"cangiaminde\" a cascate 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"cangià\" sta pàgene.",
+	"protectionindicator-explanation-cascading-move": "Sta pàgene jè pruttete da le \"spustaminde\" a cascate 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"spustà\" sta pàgene.",
+	"protectionindicator-explanation-normal-edit": "Sta pàgene jè pruttete da le \"cangiaminde\" 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"cangià\" sta pàgene.",
+	"protectionindicator-explanation-normal-move": "Sta pàgene jè pruttete da le \"spustaminde\" 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"spustà\" sta pàgene.",
+	"protectionindicator-explanation-normal-create": "Sta pàgene jè pruttete da le \"ccrejaziune\" 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"ccrejà\" sta pàgene.",
+	"protectionindicator-explanation-normal-upload": "Stu fail jè pruttete da le \"carecaminde\" 'nzigne a 'u \"$2\". 'Nge vole 'u deritte \"$1\" pe \"carecà\" stu fail.",
+	"protectionindicator-explanation-flaggedrevs": "Sta pàgene jè pruttete da le revisiune condrollate 'nzigne a 'u $2. 'Nge vole 'u deritte \"$1\" pe revisionà le cangiaminde tune.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Sta pàgene jè pruttete da le revisiune condrollate. 'Nge vole 'u deritte \"$1\" pe revisionà le cangiaminde tune."
+}
