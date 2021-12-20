@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kwj2772"
+		]
+	},
+	"protectionindicator-explanation-cascading-edit": "이 문서는 \"$2\"까지 연쇄적 편집 보호가 되어 있습니다. 이 문서를 편집하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-cascading-move": "이 문서는 \"$2\"까지 연쇄적 이동 보호가 되어 있습니다. 이 문서를 이동하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-normal-edit": "이 문서는 $2까지 편집 보호가 되어 있습니다. 이 문서를 편집하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-normal-move": "이 문서는 $2까지 이동 보호가 되어 있습니다. 이 문서를 이동하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-normal-create": "이 문서는 $2까지 생성 보호가 되어 있습니다. 이 문서를 생성하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-normal-upload": "이 문서는 $2까지 업로드 보호가 되어 있습니다. 이 파일을 업로드하려면 \"$1\" 권한이 필요합니다."
+}
