@@ -8,7 +8,7 @@
 			"Wladek92"
 		]
 	},
-	"protectionindicator-desc": "Une extension créée dans le but d’ajouter des indicateurs de protection aux pages.",
+	"protectionindicator-desc": "Une extension créée afin d’ajouter des indicateurs de protection aux pages.",
 	"protectionindicator-explanation-cascading-edit": "La page est protégée contre les « modifications » en cascade jusqu’à « $2 ». Le droit « $1 » est nécessaire pour « modifier » cette page.",
 	"protectionindicator-explanation-cascading-move": "Cette page est protégée en « déplacement » en cascade jusqu’à « $2 ». Le droit « $1 » est nécessaire pour « déplacer » cette page.",
 	"protectionindicator-explanation-normal-edit": "Cette page est protégée en « modification » jusqu’à $2. Le droit « $1 » est nécessaire pour « modifier » cette page.",
