@@ -21,6 +21,7 @@ use ExtensionRegistry;
 use FRPageConfig;
 use Language;
 use LogEventsList;
+use MediaWiki\MediaWikiServices;
 use OOUI;
 
 class ProtectionIndicatorHooks {
@@ -169,17 +170,33 @@ class ProtectionIndicatorHooks {
 		LogEventsList::showLogExtract( $out2, 'stable', $title, '', [ 'lim' => 1 ] );
 		$pOut->setExtensionData( 'protectionindicator-stability-log-data', $out2 );
 		// Start checking for the protection types
-		$restrictionTypes = $title->getRestrictionTypes();
-		foreach ( $restrictionTypes as $action ) {
-			$r = $title->getRestrictions( $action );
-			$rExpiry = $title->getRestrictionExpiry( $action );
-			foreach ( $wgRestrictionLevels as $level ) {
-				if ( in_array( $level, $r ) ) {
-					array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+		if ( method_exists( MediaWikiServices::class, 'getRestrictionStore' ) ) {
+			// MW 1.37+
+			$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
+			$restrictionTypes = $restrictionStore->listApplicableRestrictionTypes( $title );
+			foreach ( $restrictionTypes as $action ) {
+				$r = $restrictionStore->getRestrictions( $title, $action );
+				$rExpiry = $restrictionStore->getRestrictionExpiry( $title, $action );
+				foreach ( $wgRestrictionLevels as $level ) {
+					if ( in_array( $level, $r ) ) {
+						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+					}
 				}
 			}
+			$rCascade = $restrictionStore->getCascadeProtectionSources( $title, true );
+		} else {
+			$restrictionTypes = $title->getRestrictionTypes();
+			foreach ( $restrictionTypes as $action ) {
+				$r = $title->getRestrictions( $action );
+				$rExpiry = $title->getRestrictionExpiry( $action );
+				foreach ( $wgRestrictionLevels as $level ) {
+					if ( in_array( $level, $r ) ) {
+						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+					}
+				}
+			}
+			$rCascade = $title->getCascadeProtectionSources( true );
 		}
-		$rCascade = $title->getCascadeProtectionSources( true );
 		$r = $rCascade[1];
 		if ( $rCascade[0] ) {
 			foreach ( $restrictionTypes as $action ) {
