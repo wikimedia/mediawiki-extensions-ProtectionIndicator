@@ -1,4 +1,5 @@
 {
+	"name": "ProtectionIndicator",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
