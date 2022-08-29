@@ -1,10 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"FF-11",
 			"FF11"
 		]
 	},
 	"protectionindicator-explanation-cascading-edit": "Diese Seite ist bis „$2“ kaskadierernd vor Bearbeitungen geschützt. Das Recht „$1“ ist erforderlich um die Seite zu bearbeiten.",
-	"protectionindicator-explanation-cascading-move": "Diese Seite ist bis „$2“ kaskadierernd vor Verschiebungen geschützt. Das Recht „$1“ ist erforderlich um die Seite zu verschieben."
+	"protectionindicator-explanation-cascading-move": "Diese Seite ist bis „$2“ kaskadierernd vor Verschiebungen geschützt. Das Recht „$1“ ist erforderlich um die Seite zu verschieben.",
+	"protectionindicator-explanation-normal-edit": "Diese Seite kann bis $2 nicht \"bearbeitet\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"bearbeiten\".",
+	"protectionindicator-explanation-normal-move": "Diese Seite kann bis $2 nicht \"verschoben\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"verschieben\".",
+	"protectionindicator-explanation-normal-create": "Diese Seite kann bis $2 nicht \"erstellt\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"erstellen\".",
+	"protectionindicator-explanation-normal-upload": "Diese Datei kann bis $2 nicht \"hochgeladen\" werden. Das Recht \" $1 \" ist erforderlich, um diese Datei \"hochzuladen\".",
+	"protectionindicator-explanation-normal-infinity-edit": "Diese Seite kann nicht \"bearbeitet\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"bearbeiten\".",
+	"protectionindicator-explanation-normal-infinity-move": "Diese Seite kann nicht \"verschoben\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"verschieben\".",
+	"protectionindicator-explanation-normal-infinity-create": "Diese Seite kann nicht \"erstellt\" werden. Das Recht \" $1 \" ist erforderlich, um diese Seite zu \"erstellen\".",
+	"protectionindicator-explanation-normal-infinity-upload": "Diese Datei kann nicht \"hochgeladen\" werden. Das Recht \" $1 \" ist erforderlich, um diese Datei \"hochzuladen\"."
 }
