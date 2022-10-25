@@ -4,5 +4,17 @@
 			"McDutchie"
 		]
 	},
-	"protectionindicator-desc": "Un extension create pro adder indicatores de protection a paginas."
+	"protectionindicator-desc": "Un extension create pro adder indicatores de protection a paginas.",
+	"protectionindicator-explanation-cascading-edit": "Iste pagina es protegite in cascada contra modification  usque a \"$2\". Le derecto \"$1\" es necessari pro modificar iste pagina.",
+	"protectionindicator-explanation-cascading-move": "Iste pagina es protegite in cascada contra renomination usque a \"$2\". Le derecto \"$1\" es necessari pro renominar iste pagina.",
+	"protectionindicator-explanation-normal-edit": "Iste pagina es protegite contra modification usque a \"$2\". Le derecto \"$1\" es necessari pro modificar iste pagina.",
+	"protectionindicator-explanation-normal-move": "Iste pagina es protegite contra renomination usque a \"$2\". Le derecto \"$1\" es necessari pro renominar iste pagina.",
+	"protectionindicator-explanation-normal-create": "Iste pagina es protegite contra creation usque a \"$2\". Le derecto \"$1\" es necessari pro crear iste pagina.",
+	"protectionindicator-explanation-normal-upload": "Iste file es protegite contra incargamento usque a \"$2\". Le derecto \"$1\" es necessari pro incargar iste file.",
+	"protectionindicator-explanation-normal-infinity-edit": "Iste pagina es protegite contra modification. Le derecto \"$1\" es necessari pro modificar iste pagina.",
+	"protectionindicator-explanation-normal-infinity-move": "Iste pagina es protegite contra renomination. Le derecto \"$1\" es necessari pro renominar iste pagina.",
+	"protectionindicator-explanation-normal-infinity-create": "Iste pagina es protegite contra creation. Le derecto \"$1\" es necessari pro crear iste pagina.",
+	"protectionindicator-explanation-normal-infinity-upload": "Iste file es protegite contra incargamento. Le derecto \"$1\" es necessari pro incargar iste file.",
+	"protectionindicator-explanation-flaggedrevs": "Iste pagina es protegite contra Marcaversiones usque a $2. Le derecto \"$1\" es necessari pro revider tu proprie modificationes.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Iste pagina es protegite contra Marcaversiones. Le derecto \"$1\" es necessari pro revider tu proprie modificationes."
 }
