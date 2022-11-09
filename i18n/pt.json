@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"protectionindicator-desc": "Uma extensão criada com o objetivo de adicionar indicadores de proteção às páginas.",
+	"protectionindicator-explanation-cascading-edit": "Esta página está protegida em cascata contra \"edição\" até \"$2\". É necessário o direito \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-cascading-move": "Esta página está protegida em cascata contra \"movimentação\" até \"$2\". É necessário o direito \"$1\" para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-edit": "Esta página está protegida contra \"edição\" até \"$2\". É necessário o direito \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-move": "Esta página está protegida contra \"movimentação\" até \"$2\". É necessário o direito \"$1\" para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-create": "Esta página está protegida contra \"criação\" até \"$2\". É necessário o direito \"$1\" para \"criar\" esta página.",
+	"protectionindicator-explanation-normal-upload": "Este ficheiro está protegido contra \"carregamento\" até \"$2\". É necessário o direito \"$1\" para \"carregar\" este ficheiro.",
+	"protectionindicator-explanation-normal-infinity-edit": "Esta página está protegida contra \"edição\". É necessário o direito \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-move": "Esta página está protegida contra \"movimentação\". É necessário o direito \"$1\" para \"mover\" esta página.",
+	"protectionindicator-explanation-normal-infinity-create": "Esta página está protegida contra \"criação\". É necessário o direito \"$1\" para \"criar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-upload": "Este ficheiro está protegido contra \"carregamento\". É necessário o direito \"$1\" para \"carregar\" este ficheiro.",
+	"protectionindicator-explanation-flaggedrevs": "Esta página está protegida contra a revisão de edições até $2. É necessário o direito \"$1\" para rever as suas próprias edições.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Esta página está protegida contra a revisão de edições. É necessário o direito \"$1\" para rever as suas próprias edições."
+}
