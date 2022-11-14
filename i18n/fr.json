@@ -9,9 +9,9 @@
 		]
 	},
 	"protectionindicator-desc": "Une extension créée afin d’ajouter des indicateurs de protection aux pages.",
-	"protectionindicator-explanation-cascading-edit": "La page est protégée contre les « modifications » en cascade jusqu’à « $2 ». Le droit « $1 » est nécessaire pour « modifier » cette page.",
+	"protectionindicator-explanation-cascading-edit": "La page est protégée contre les « modifications » en cascade jusqu’à « $2 ». Le droit « $1 » est nécessaire pour « modifier » cette page.",
 	"protectionindicator-explanation-cascading-move": "Cette page est protégée en « déplacement » en cascade jusqu’à « $2 ». Le droit « $1 » est nécessaire pour « déplacer » cette page.",
-	"protectionindicator-explanation-normal-edit": "Cette page est protégée en « modification » jusqu’à $2. Le droit « $1 » est nécessaire pour « modifier » cette page.",
+	"protectionindicator-explanation-normal-edit": "Cette page est protégée en « modification » jusqu’à $2. Le droit « $1 » est nécessaire pour « modifier » cette page.",
 	"protectionindicator-explanation-normal-move": "Cette page est protégée en « déplacement » jusqu’à $2. Le droit « $1 » est nécessaire pour « déplacer » cette page.",
 	"protectionindicator-explanation-normal-create": "Cette page est protégée en « création » jusqu’à $2. Le droit « $1 » est nécessaire pour « créer » cette page.",
 	"protectionindicator-explanation-normal-upload": "Ce fichier est protégé en « téléversement » jusqu’à $2. Le droit « $1 » est nécessaire pour « téléverser » ce fichier.",
@@ -19,6 +19,6 @@
 	"protectionindicator-explanation-normal-infinity-move": "Cette page est protégée contre le « déplacement ». Le droit « $1 » est nécessaire pour « déplacer » cette page.",
 	"protectionindicator-explanation-normal-infinity-create": "Cette page est protégée en « création ». Le droit « $1 » est nécessaire pour « créer » cette page.",
 	"protectionindicator-explanation-normal-infinity-upload": "Ce fichier est protégé contre le « téléversement ». Le droit « $1 » est nécessaire pour « téléverser » ce fichier.",
-	"protectionindicator-explanation-flaggedrevs": "Cette page est protégée contre la relecture jusqu’au $2. Le droit « $1 » est nécessaire pour relire vos propres modifications.",
-	"protectionindicator-explanation-flaggedrevs-infinity": "Cette page est protégée contre les relectures. Le droit « $1 » est nécessaire pour relire vos propres modifications."
+	"protectionindicator-explanation-flaggedrevs": "Cette page est protégée contre la relecture jusqu’au $2. Le droit « $1 » est nécessaire pour relire vos propres modifications.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Cette page est protégée contre les relectures. Le droit « $1 » est nécessaire pour relire vos propres modifications."
 }
