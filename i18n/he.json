@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"protectionindicator-desc": "הרחבה שנוצרה לצורך הוספת סמלי הגנה לדפים.",
+	"protectionindicator-explanation-cascading-edit": "הדף הזה מוגן מפני \"עריכה\" בהגנה מדורגת עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"לערוך\" את הדף הזה.",
+	"protectionindicator-explanation-cascading-move": "הדף הזה מוגן מפני \"העברה\" בהגנה מדורגת עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"להעביר\" את הדף הזה.",
+	"protectionindicator-explanation-normal-edit": "הדף הזה מוגן מפני \"עריכה\" עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"לערוך\" את הדף הזה.",
+	"protectionindicator-explanation-normal-move": "הדף הזה מוגן מפני \"העברה\" עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"לערוך\" את הדף הזה.",
+	"protectionindicator-explanation-normal-create": "הדף הזה מוגן מפני \"יצירה\" בהגנה מדורגת עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"ליצור\" את הדף הזה.",
+	"protectionindicator-explanation-normal-upload": "הקובץ הזה מוגן מפני \"העלאה\" עד \"$2\". ההרשאה \"$1\" נדרשת כדי \"להעלות\" את הקובץ הזה.",
+	"protectionindicator-explanation-flaggedrevs": "הדף הזה מוגן בגרסאות מסומנות עד \"$2\". ההרשאה \"$1\" נדרשת כדי לסקור את העריכות של עצמך.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "הדף הזה מוגן בגרסאות מסומנות. ההרשאה \"$1\" נדרשת כדי לסקור את העריכות של עצמך."
+}
