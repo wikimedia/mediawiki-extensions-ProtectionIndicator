@@ -1,16 +1,16 @@
-.protectionindicator-extension-popup .comment--without-parentheses:before,
-.protectionindicator-extension-popup .mw-changeslist-links:before,
-.protectionindicator-extension-popup .mw-tag-markers:before {
+.protectionindicator-extension-popup .comment--without-parentheses::before,
+.protectionindicator-extension-popup .mw-changeslist-links::before,
+.protectionindicator-extension-popup .mw-tag-markers::before {
 	content: '( ';
 }
 
-.protectionindicator-popup .comment--without-parentheses:after,
-.protectionindicator-popup .mw-changeslist-links:after,
-.protectionindicator-popup .mw-tag-markers:after {
+.protectionindicator-popup .comment--without-parentheses::after,
+.protectionindicator-popup .mw-changeslist-links::after,
+.protectionindicator-popup .mw-tag-markers::after {
 	content: ' )';
 }
 
-.protectionindicator-popup .mw-changeslist-links > span:not( :first-child ):before {
+.protectionindicator-popup .mw-changeslist-links > span:not( :first-child )::before {
 	content: ' | ';
 }
 
