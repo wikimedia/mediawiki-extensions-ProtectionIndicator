@@ -5,12 +5,12 @@
 		]
 	},
 	"protectionindicator-desc": "Razširitev za dodajanje oznak zaščite na strani",
-	"protectionindicator-explanation-cascading-edit": "Ta stran je kaskadno zaščitena proti urejanju do »$2«. Za urejanje te strani je potrebna pravica »$1«.",
-	"protectionindicator-explanation-cascading-move": "Ta stran je kaskadno zaščitena proti prestavljanju do »$2«. Za prestavitev te strani je potrebna pravica »$1«.",
-	"protectionindicator-explanation-normal-edit": "Ta stran je zaščitena proti urejanju do »$2«. Za urejanje te strani je potrebna pravica »$1«.",
-	"protectionindicator-explanation-normal-move": "Ta stran je zaščitena proti prestavljanju do »$2«. Za prestavitev te strani je potrebna pravica »$1«.",
+	"protectionindicator-explanation-cascading-edit": "Ta stran je kaskadno zaščitena pred urejanjem do »$2«. Za urejanje te strani je potrebna pravica »$1«.",
+	"protectionindicator-explanation-cascading-move": "Ta stran je kaskadno zaščitena pred prestavljanjem do »$2«. Za prestavitev te strani je potrebna pravica »$1«.",
+	"protectionindicator-explanation-normal-edit": "Ta stran je zaščitena pred urejanjem do »$2«. Za urejanje te strani je potrebna pravica »$1«.",
+	"protectionindicator-explanation-normal-move": "Ta stran je zaščitena pred prestavljanjem do »$2«. Za prestavitev te strani je potrebna pravica »$1«.",
 	"protectionindicator-explanation-normal-create": "Ta stran je zaščitena proti ustvarjanju do »$2«. Za ustvaritev te strani je potrebna pravica »$1«.",
-	"protectionindicator-explanation-normal-upload": "Ta datoteka je zaščitena proti nalaganju do »$2«. Za naložitev te datoteke je potrebna pravica »$1«.",
-	"protectionindicator-explanation-flaggedrevs": "Ta stran je zaščitena proti pregledu do »$2«. Za pregled lastnih urejanj je potrebna pravica »$1«.",
-	"protectionindicator-explanation-flaggedrevs-infinity": "Ta stran je zaščitena proti pregledu. Za pregled lastnih urejanj je potrebna pravica »$1«."
+	"protectionindicator-explanation-normal-upload": "Ta datoteka je zaščitena pred nalaganjem do »$2«. Za naložitev te datoteke je potrebna pravica »$1«.",
+	"protectionindicator-explanation-flaggedrevs": "Ta stran je zaščitena pred pregledom do »$2«. Za pregled lastnih urejanj je potrebna pravica »$1«.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Ta stran je zaščitena pred pregledom. Za pregled lastnih urejanj je potrebna pravica »$1«."
 }
