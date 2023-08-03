@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"protectionindicator-desc": "Proširenje za stavljanje indikatora zaštite na stranice.",
+	"protectionindicator-explanation-cascading-edit": "Ova je stranica lančano zaštićena od uređivanja do \"$2\". Za njeno uređivanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-cascading-move": "Ova je stranica lančano zaštićena od premještanja do \"$2\". Za njeno premještanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-edit": "Ova je stranica zaštićena od uređivanja do $2. Za njeno uređivanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-move": "Ova je stranica zaštićena od premještanja do $2. Za njeno premještanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-create": "Ova je stranica zaštićena od pravljenja do $2. Za njeno pravljenje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-upload": "Ova je datoteka zaštićena od postavljanja do \"$2\". Za njeno postavljanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-infinity-edit": "Ova je stranica zaštićena od uređivanja. Za njeno uređivanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-infinity-move": "Ova je stranica zaštićena od premještanja. Za njeno premještanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-infinity-create": "Ova je stranica zaštićena od pravljenja. Za njeno pravljenje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-normal-infinity-upload": "Ova je datoteka zaštićena od postavljanja. Za njeno postavljanje potrebno je pravo \"$1\".",
+	"protectionindicator-explanation-flaggedrevs": "Ova stranica je flaggedrevs zaštićena do $2. Potrebno je pravo \"$1\" za pregled svojih izmjena.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Ova stranica je flaggedrevs zaštićena. Potrebno je pravo \"$1\" za pregled svojih izmjena."
+}
