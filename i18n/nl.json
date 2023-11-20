@@ -1,9 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
+			"McDutchie",
 			"PonkoSasuke"
 		]
 	},
-	"protectionindicator-explanation-cascading-edit": "Deze pagina is trapsgewijs tegen \"edit\" beschermd tot \"$2\". Het \"$1\" recht is nodig om \"edit\" voor deze pagina toe te staan.",
-	"protectionindicator-explanation-cascading-move": "Deze pagina is trapsgewijs tegen \"move\" beschermd tot \"$2\". Het \"$1\" recht is nodig om \"move\" voor deze pagina toe te staan."
+	"protectionindicator-desc": "Een extensie gemaakt met als doel beveiligingsindicatoren aan pagina’s toe te voegen.",
+	"protectionindicator-explanation-cascading-edit": "Deze pagina is tot “$2” trapsgewijs tegen bewerken beveiligd. Het recht “$1” is vereist om het bewerken van deze pagina toe te staan.",
+	"protectionindicator-explanation-cascading-move": "Deze pagina is tot “$2” trapsgewijs tegen hernoemen beveiligd. Het recht “$1” is vereist om het hernoemen van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-edit": "Deze pagina is tot $2 tegen bewerken beveiligd. Het recht “$1” is vereist om het bewerken van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-move": "Deze pagina is tot $2 tegen hernoemen beveiligd. Het recht “$1” is vereist om het hernoemen van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-create": "Deze pagina is tot $2 tegen aanmaak beveiligd. Het recht “$1” is vereist om het aanmaken van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-upload": "Dit bestand is tot $2 tegen uploaden beveiligd. Het recht “$1” is vereist om dit bestand te uploaden.",
+	"protectionindicator-explanation-normal-infinity-edit": "Deze pagina is tegen bewerken beveiligd. Het recht “$1” is vereist om het bewerken van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-infinity-move": "Deze pagina is tegen hernoemen beveiligd. Het recht “$1” is vereist om het hernoemen van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-infinity-create": "Deze pagina is tegen aanmaak beveiligd. Het recht “$1” is vereist om het aanmaken van deze pagina toe te staan.",
+	"protectionindicator-explanation-normal-infinity-upload": "Dit bestand is tegen uploaden beveiligd. Het recht “$1” is vereist om dit bestand te uploaden.",
+	"protectionindicator-explanation-flaggedrevs": "Deze pagina is tot $2 beveiligd tegen het beoordelen van bewerkingen. Het recht “$1” is vereist om uw eigen bewerkingen te beoordelen.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Deze pagina is beveiligd tegen het beoordelen van bewerkingen. Het recht “$1” is vereist om uw eigen bewerkingen te beoordelen."
 }
