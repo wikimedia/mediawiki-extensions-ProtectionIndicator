@@ -17,18 +17,18 @@
 
 namespace MediaWiki\Extension\ProtectionIndicator;
 
-use ResourceLoaderContext;
-use ResourceLoaderSiteStylesModule;
+use MediaWiki\ResourceLoader\Context;
+use MediaWiki\ResourceLoader\SiteStylesModule;
 
 /**
  * Custom ResourceLoader module that loads a custom ProtectionIndicatorCustom.css per-wiki.
  */
-class CustomProtectionIndicator extends ResourceLoaderSiteStylesModule {
+class CustomProtectionIndicator extends SiteStylesModule {
 	/**
-	 * @param ResourceLoaderContext $context
+	 * @param Context $context
 	 * @return array
 	 */
-	protected function getPages( ResourceLoaderContext $context ) {
+	protected function getPages( Context $context ) {
 		return [
 			'MediaWiki:ProtectionIndicatorCustom.css' => [ 'type' => 'style' ],
 		];
