@@ -179,7 +179,7 @@ class ProtectionIndicatorHooks {
 				$rExpiry = $restrictionStore->getRestrictionExpiry( $title, $action );
 				foreach ( $wgRestrictionLevels as $level ) {
 					if ( in_array( $level, $r ) ) {
-						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry, false, false ] );
 					}
 				}
 			}
@@ -191,7 +191,7 @@ class ProtectionIndicatorHooks {
 				$rExpiry = $title->getRestrictionExpiry( $action );
 				foreach ( $wgRestrictionLevels as $level ) {
 					if ( in_array( $level, $r ) ) {
-						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry , false, false ] );
+						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry, false, false ] );
 					}
 				}
 			}
@@ -204,7 +204,7 @@ class ProtectionIndicatorHooks {
 					$r = $r[$action];
 					foreach ( $wgRestrictionLevels as $level ) {
 						if ( in_array( $level, $r ) ) {
-							array_push( $protectionIndicatorData, [ $action, $level, null , true, false ] );
+							array_push( $protectionIndicatorData, [ $action, $level, null, true, false ] );
 						}
 					}
 				}
