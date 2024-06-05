@@ -1,9 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"No se"
 		]
 	},
 	"protectionindicator-desc": "Una extensión creada con el fin de añadir indicadores de protección a las páginas.",
-	"protectionindicator-explanation-normal-upload": "Este archivo está protegido contra sobrescrituras hasta el $2. Hace falta el permiso «$1» para sobrescribir el archivo."
+	"protectionindicator-explanation-normal-edit": "Esta página está protegida contra \"edición\" hasta $2. Se requiere el derecho \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-move": "Esta página está protegida contra \"traslado\" hasta $2. Se requiere el permiso \"$1\" para \"trasladar\" esta página.",
+	"protectionindicator-explanation-normal-create": "Esta página está protegida contra \"creación\" hasta $2. Se requiere el derecho \"$1\" para \"crear\" esta página.",
+	"protectionindicator-explanation-normal-upload": "Este archivo está protegido contra sobrescrituras hasta el $2. Hace falta el permiso «$1» para sobrescribir el archivo.",
+	"protectionindicator-explanation-normal-infinity-edit": "Esta página está protegida contra la \"edición\". Se requiere el permiso \"$1\" para \"editar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-move": "Esta página está protegida contra el \"traslado\". Se requiere el permiso \"$1\" para \"trasladar\" esta página.",
+	"protectionindicator-explanation-normal-infinity-create": "Esta página está protegida contra \"creación\". Se requiere el derecho \"$1\" para \"crear\" esta página."
 }
