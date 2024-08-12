@@ -19,7 +19,6 @@ namespace MediaWiki\Extension\ProtectionIndicator;
 
 use ExtensionRegistry;
 use FRPageConfig;
-use Language;
 use LogEventsList;
 use MediaWiki\MediaWikiServices;
 use OOUI;
@@ -91,7 +90,7 @@ class ProtectionIndicatorHooks {
 	 */
 	protected static function createIndicator( $protection ) {
 		// infinity time should give us a empty string
-		$o = new Language;
+		$o = MediaWikiServices::getInstance()->getLanguageFactory()->getLanguage( 'en' );
 		// @todo Figure out support for Bengali digits
 		$timestamp = $o->formatExpiry( $protection[2], true );
 		// classes are of the type
