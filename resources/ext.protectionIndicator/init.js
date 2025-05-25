@@ -1,8 +1,8 @@
 ( function () {
 	// eslint-disable-next-line no-jquery/no-global-selector
-	var $protectionIndicators = $( '.protectionindicator-icon' );
+	const $protectionIndicators = $( '.protectionindicator-icon' );
 	$protectionIndicators.each( function () {
-		var protectionExplanation, icon = OO.ui.infuse( this ), $htmlContent;
+		let protectionExplanation, icon = OO.ui.infuse( this ), $htmlContent;
 		function showProtectionExplanation( e ) {
 			e.preventDefault();
 			if ( !protectionExplanation ) {
@@ -25,7 +25,7 @@
 			}
 		}
 		$htmlContent = $( '<div>' ).addClass( 'protectionindicator-help-text' ).html( icon.getLabel() );
-		icon.$element.on( 'click', function ( e ) {
+		icon.$element.on( 'click', ( e ) => {
 			showProtectionExplanation( e );
 		} );
 	} );
