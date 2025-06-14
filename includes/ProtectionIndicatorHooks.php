@@ -154,10 +154,10 @@ class ProtectionIndicatorHooks {
 	/**
 	 * Updates the values of portection and stores them in extension data
 	 * @param \Content $content Cotent object of page
-	 * @param \Title $title Title object of page
+	 * @param \MediaWiki\Title\Title $title MediaWiki\Title\Title object of page
 	 * @param \ParserOutput $pOut ParserOutput object of the page
 	 */
-	public static function onContentAlterParserOutput( \Content $content, \Title $title,
+	public static function onContentAlterParserOutput( \Content $content, \MediaWiki\Title\Title $title,
 	 \ParserOutput $pOut ) {
 		global $wgRestrictionLevels;
 		// Get the log entry
