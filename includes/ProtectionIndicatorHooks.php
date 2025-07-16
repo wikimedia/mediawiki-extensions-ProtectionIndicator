@@ -20,17 +20,23 @@ namespace MediaWiki\Extension\ProtectionIndicator;
 use ExtensionRegistry;
 use FRPageConfig;
 use LogEventsList;
+use MediaWiki\Content\Content;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\Article;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserOutput;
+use MediaWiki\Parser\PPFrame;
+use MediaWiki\Title\Title;
 use OOUI;
 
 class ProtectionIndicatorHooks {
 	/**
 	 * Hook to load the protection icons on article pages
-	 * @param \Article $article Article object to be used
+	 * @param Article $article Article object to be used
 	 * @param bool &$outputDone
 	 * @param bool &$pcache
 	 */
-	public static function onArticleViewHeader( \Article $article, &$outputDone, &$pcache ) {
+	public static function onArticleViewHeader( Article $article, &$outputDone, &$pcache ) {
 		$title = $article->getTitle();
 		$out = $article->getContext()->getOutput();
 		$config = $out->getConfig();
@@ -129,9 +135,9 @@ class ProtectionIndicatorHooks {
 
 	/**
 	 * Hook to create a magic word
-	 * @param \Parser $parser
+	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( \Parser $parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'suppressProtectionIndicator',
 		[ self::class, 'suppressProtectionIndicator' ] );
 	}
@@ -140,12 +146,11 @@ class ProtectionIndicatorHooks {
 	 * Sets exension data needed to supresss all icons
 	 * @param string|null $input
 	 * @param array $args Arguments of the magic word
-	 * @param \Parser $parser
-	 * @param \PPFrame $frame
+	 * @param Parser $parser
+	 * @param PPFrame $frame
 	 * @return string
 	 */
-	public static function suppressProtectionIndicator( $input, array $args,
-	\Parser $parser, \PPFrame $frame ) {
+	public static function suppressProtectionIndicator( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$out = $parser->getOutput();
 		$out->setExtensionData( 'protectionindicator-supress-all', true );
 		return '';
@@ -153,12 +158,11 @@ class ProtectionIndicatorHooks {
 
 	/**
 	 * Updates the values of portection and stores them in extension data
-	 * @param \Content $content Cotent object of page
-	 * @param \Title $title Title object of page
-	 * @param \ParserOutput $pOut ParserOutput object of the page
+	 * @param Content $content Cotent object of page
+	 * @param Title $title Title object of page
+	 * @param ParserOutput $pOut ParserOutput object of the page
 	 */
-	public static function onContentAlterParserOutput( \Content $content, \Title $title,
-	 \ParserOutput $pOut ) {
+	public static function onContentAlterParserOutput( Content $content, Title $title, ParserOutput $pOut ) {
 		global $wgRestrictionLevels;
 		// Get the log entry
 		$out1 = '';
@@ -169,33 +173,18 @@ class ProtectionIndicatorHooks {
 		LogEventsList::showLogExtract( $out2, 'stable', $title, '', [ 'lim' => 1 ] );
 		$pOut->setExtensionData( 'protectionindicator-stability-log-data', $out2 );
 		// Start checking for the protection types
-		if ( method_exists( MediaWikiServices::class, 'getRestrictionStore' ) ) {
-			// MW 1.37+
-			$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
-			$restrictionTypes = $restrictionStore->listApplicableRestrictionTypes( $title );
-			foreach ( $restrictionTypes as $action ) {
-				$r = $restrictionStore->getRestrictions( $title, $action );
-				$rExpiry = $restrictionStore->getRestrictionExpiry( $title, $action );
-				foreach ( $wgRestrictionLevels as $level ) {
-					if ( in_array( $level, $r ) ) {
-						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry, false, false ] );
-					}
+		$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
+		$restrictionTypes = $restrictionStore->listApplicableRestrictionTypes( $title );
+		foreach ( $restrictionTypes as $action ) {
+			$r = $restrictionStore->getRestrictions( $title, $action );
+			$rExpiry = $restrictionStore->getRestrictionExpiry( $title, $action );
+			foreach ( $wgRestrictionLevels as $level ) {
+				if ( in_array( $level, $r ) ) {
+					array_push( $protectionIndicatorData, [ $action, $level, $rExpiry, false, false ] );
 				}
 			}
-			$rCascade = $restrictionStore->getCascadeProtectionSources( $title, true );
-		} else {
-			$restrictionTypes = $title->getRestrictionTypes();
-			foreach ( $restrictionTypes as $action ) {
-				$r = $title->getRestrictions( $action );
-				$rExpiry = $title->getRestrictionExpiry( $action );
-				foreach ( $wgRestrictionLevels as $level ) {
-					if ( in_array( $level, $r ) ) {
-						array_push( $protectionIndicatorData, [ $action, $level, $rExpiry, false, false ] );
-					}
-				}
-			}
-			$rCascade = $title->getCascadeProtectionSources( true );
 		}
+		$rCascade = $restrictionStore->getCascadeProtectionSources( $title, true );
 		$r = $rCascade[1];
 		if ( $rCascade[0] ) {
 			foreach ( $restrictionTypes as $action ) {
