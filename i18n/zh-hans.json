@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC"
+		]
+	},
+	"protectionindicator-desc": "为页面添加保护指示所创建的扩展。",
+	"protectionindicator-explanation-cascading-edit": "此页面受级联“编辑”保护直到“$2”。需要“$1”权限才能“编辑”此页面。",
+	"protectionindicator-explanation-cascading-move": "此页面受级联“移动”保护直到“$2”。需要“$1”权限才能“移动”此页面。",
+	"protectionindicator-explanation-normal-edit": "此页面受到“编辑”保护直到$2。需要“$1”权限才能“编辑”此页面。",
+	"protectionindicator-explanation-normal-move": "此页面受到“移动”保护直到$2。需要“$1”权限才能“移动”此页面。",
+	"protectionindicator-explanation-normal-create": "此页面受到“创建”保护直到$2。需要“$1”权限才能“创建”此页面。",
+	"protectionindicator-explanation-normal-upload": "此文件受到“上传”保护直到$2。需要“$1”权限才能“上传”此文件。",
+	"protectionindicator-explanation-normal-infinity-edit": "此页面受到“编辑”保护。需要“$1”权限才能“编辑”此页面。",
+	"protectionindicator-explanation-normal-infinity-move": "此页面受到“移动”保护。需要“$1”权限才能“移动”此页面。",
+	"protectionindicator-explanation-normal-infinity-create": "此页面受到“创建”保护。需要“$1”权限才能“创建”此页面。",
+	"protectionindicator-explanation-normal-infinity-upload": "此文件受到“上传”保护。需要“$1”权限才能“上传”此文件。",
+	"protectionindicator-explanation-flaggedrevs": "此页面被标记为受保护直到$2。需要“$1”权限才能检查您自己的编辑。",
+	"protectionindicator-explanation-flaggedrevs-infinity": "此页面被标记为受保护。需要“$1”权限才能检查您自己的编辑。"
+}
