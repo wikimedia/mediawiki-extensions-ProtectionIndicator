@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Majavah"
+			"Majavah",
+			"Taavi"
 		]
 	},
 	"protectionindicator-explanation-cascading-move": "Tämä sivu on suojattu siirrolta tarttuvasti \"$2\" asti. Käyttöoikeus \"$1\" vaaditaan tämän sivun siirtämiseen."
