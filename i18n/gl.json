@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"protectionindicator-desc": "Unha extensión creada co propósito de engadir indicadores de protección ás páxinas.",
+	"protectionindicator-explanation-cascading-edit": "Esta páxina está protexida en cascada contra a edición ata o $2. Cómpre o dereito «$1» para «editar» a páxina.",
+	"protectionindicator-explanation-cascading-move": "Esta páxina está protexida en cascada contra o traslado ata o $2. Cómpre o dereito «$1» para «mover» a páxina.",
+	"protectionindicator-explanation-normal-edit": "Esta páxina está protexida contra a edición ata o $2. Cómpre o dereito «$1» para «editar» a páxina.",
+	"protectionindicator-explanation-normal-move": "Esta páxina está protexida contra o traslado ata o $2. Cómpre o dereito «$1» para «mover» a páxina.",
+	"protectionindicator-explanation-normal-create": "Esta páxina está protexida contra a creación ata o $2. Cómpre o dereito «$1» para «crear» a páxina.",
+	"protectionindicator-explanation-normal-upload": "Esta ficheiro está protexido contra a subida ata o $2. Cómpre o dereito «$1» para «subir» o ficheiro.",
+	"protectionindicator-explanation-normal-infinity-edit": "Esta páxina está protexida contra a edición. Cómpre o dereito «$1» para «editar» a páxina.",
+	"protectionindicator-explanation-normal-infinity-move": "Esta páxina está protexida contra o traslado. Cómpre o dereito «$1» para «mover» a páxina.",
+	"protectionindicator-explanation-normal-infinity-create": "Esta páxina está protexida contra a creación. Cómpre o dereito «$1» para «crear» a páxina.",
+	"protectionindicator-explanation-normal-infinity-upload": "Esta ficheiro está protexido contra a subida. Cómpre o dereito «$1» para «subir» o ficheiro.",
+	"protectionindicator-explanation-flaggedrevs": "Esta páxina está protexida contra a revisión de edicións ata o $2. Cómpre o dereito «$1» para revisar as túas propias edicións.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "Esta páxina está protexida contra a revisión de edicións. Cómpre o dereito «$1» para revisar as túas propias edicións."
+}
