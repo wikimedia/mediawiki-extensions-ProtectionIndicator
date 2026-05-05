@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kwj2772"
+			"Kwj2772",
+			"Tensama0415"
 		]
 	},
+	"protectionindicator-desc": "문서에 보호 표시기를 추가하기 위해 제작된 확장 기능입니다.",
 	"protectionindicator-explanation-cascading-edit": "이 문서는 \"$2\"까지 연쇄적 편집 보호가 되어 있습니다. 이 문서를 편집하려면 \"$1\" 권한이 필요합니다.",
 	"protectionindicator-explanation-cascading-move": "이 문서는 \"$2\"까지 연쇄적 이동 보호가 되어 있습니다. 이 문서를 이동하려면 \"$1\" 권한이 필요합니다.",
 	"protectionindicator-explanation-normal-edit": "이 문서는 $2까지 편집 보호가 되어 있습니다. 이 문서를 편집하려면 \"$1\" 권한이 필요합니다.",
@@ -13,5 +15,7 @@
 	"protectionindicator-explanation-normal-infinity-edit": "이 문서는 편집 보호가 되어 있습니다. 이 문서를 편집하려면 \"$1\" 권한이 필요합니다.",
 	"protectionindicator-explanation-normal-infinity-move": "이 문서는 이동 보호가 되어 있습니다. 이 문서를 이동하려면 \"$1\" 권한이 필요합니다.",
 	"protectionindicator-explanation-normal-infinity-create": "이 문서는 생성 보호가 되어 있습니다. 이 문서를 생성하려면 \"$1\" 권한이 필요합니다.",
-	"protectionindicator-explanation-normal-infinity-upload": "이 문서는 업로드 보호가 되어 있습니다. 이 파일을 업로드하려면 \"$1\" 권한이 필요합니다."
+	"protectionindicator-explanation-normal-infinity-upload": "이 문서는 업로드 보호가 되어 있습니다. 이 파일을 업로드하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-flaggedrevs": "이 문서는 $2 까지 flaggedrevs로 보호됩니다. 본인의 편집 내용을 검토하려면 \"$1\" 권한이 필요합니다.",
+	"protectionindicator-explanation-flaggedrevs-infinity": "이 문서는 flaggedrevs로 보호됩니다. 본인의 편집 내용을 검토하려면 \"$1\" 권한이 필요합니다."
 }
