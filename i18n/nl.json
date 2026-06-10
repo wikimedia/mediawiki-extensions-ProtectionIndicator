@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"McDutchie",
-			"PonkoSasuke"
+			"PonkoSasuke",
+			"Siebrand"
 		]
 	},
-	"protectionindicator-desc": "Een extensie gemaakt met als doel beveiligingsindicatoren aan pagina’s toe te voegen.",
+	"protectionindicator-desc": "Een uitbreiding gemaakt met als doel beveiligingsindicatoren aan pagina’s toe te voegen.",
 	"protectionindicator-explanation-cascading-edit": "Deze pagina is tot “$2” trapsgewijs tegen bewerken beveiligd. Het recht “$1” is vereist om het bewerken van deze pagina toe te staan.",
 	"protectionindicator-explanation-cascading-move": "Deze pagina is tot “$2” trapsgewijs tegen hernoemen beveiligd. Het recht “$1” is vereist om het hernoemen van deze pagina toe te staan.",
 	"protectionindicator-explanation-normal-edit": "Deze pagina is tot $2 tegen bewerken beveiligd. Het recht “$1” is vereist om het bewerken van deze pagina toe te staan.",
